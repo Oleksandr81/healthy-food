@@ -1,0 +1,26 @@
+.work {
+
+  // .work__container
+  &__container {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  // .work__block
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 60px 0 30px;
+  }
+
+  // .work__title-block
+  &__title-block {}
+
+  // .work__steps
+  &__steps {
+    padding-top: 60px;
+  }
+}

@@ -1,0 +1,34 @@
+.about {
+  // .about__slider-dish
+  &__slider-dish {
+  }
+}
+.slider-dish {
+  position: relative;
+  // .slider-dish__prev-btn
+  &__prev-btn {
+    position: absolute;
+    left: -132px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+  // .slider-dish__next-btn
+  &__next-btn {
+    position: absolute;
+    right: -132px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+  // .slider-dish__wrapper
+  &__wrapper {
+    display: flex;
+    gap: 35px;
+  }
+  // .slider-dish__slide
+  &__slide {
+    width: 350px;
+    height: 270px;
+  }
+}

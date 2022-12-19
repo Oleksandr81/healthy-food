@@ -1,0 +1,28 @@
+.dishes {
+  // .dishes__conteiner
+  &__conteiner {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+  // .dishes__block
+  &__block {
+    text-align: center;
+  }
+  // .dishes__title-block
+  &__title-block {
+  }
+  // .dishes__dishes-cards
+  &__dishes-cards {
+    padding: 60px 0 30px;
+  }
+}
+
+.dishes-cards {
+  &__block {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+

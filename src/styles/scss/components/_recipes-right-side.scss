@@ -1,0 +1,128 @@
+.recipes {
+
+  // .recipes__right-side
+  &__right-side {}
+}
+
+.right-side-recipes {
+
+  // .right-side-recipes__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+
+  // .right-side-recipes__block
+  &__block {
+    position: relative;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 30px 20px 30px;
+    background: $color-paragraph;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+
+  &__block_green {
+    background: $color-main-primary;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  // .right-side-recipes__text
+  &__text {
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    text-align: left;
+    z-index: 1;
+  }
+
+  &__text_green {
+    color: $color-paragraph;
+  }
+
+  // .right-side-recipes__information
+  &__information {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  // .right-side-recipes__main
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  // .right-side-recipes__title
+  &__title {
+    font-family: $fontFamilyBlack;
+    font-size: 1rem;
+    line-height: 2.5;
+    letter-spacing: 1.25px;
+    color: $color-text-primary;
+    padding: 0px 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  &__title_green {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  // .right-side-recipes__date
+  &__date {
+    font-size: 1.2rem;
+    line-height: 2.08;
+    color: $color-text;
+  }
+
+  &__date_green {
+    color: $color-paragraph;
+  }
+}
+
+.left-side-recipes {
+  display: flex;
+
+  // .left-side-recipes__revision
+  &__revision {}
+
+  // .left-side-recipes__watch-block
+  &__watch-block {
+    display: flex;
+  }
+
+  &__img_green {
+    filter: invert(90%) sepia(3%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(100%);
+  }
+
+  // .left-side-recipes__number
+  &__number {
+    font-family: $fontFamilyBolt;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: #D8D8D8;
+  }
+
+  &__number_green {
+    color: $color-paragraph;
+  }
+
+}

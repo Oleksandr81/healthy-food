@@ -1,0 +1,35 @@
+@import "./abstracts/variables";
+
+// base
+@import "./base/null";
+@import "./base/fonts";
+@import "./base/base";
+
+
+// Components
+@import "./components/menu-navigation";
+@import "./components/contact-main";
+@import "./components/button-main";
+@import "./components/title-block";
+@import "./components/slider-dish";
+@import "./components/step-container";
+@import "./components/dish-card";
+@import "./components/button-order";
+@import "./components/chef-card";
+@import "./components/recipes-left-side";
+@import "./components/recipes-right-side";
+@import "./components/social-conteiner";
+
+
+// Layouts
+@import "./layouts/header.scss";
+@import "./layouts/navigation.scss";
+@import "./layouts/section-main";
+@import "./layouts/section-about";
+@import "./layouts/section-work";
+@import "./layouts/section-dishes";
+@import "./layouts/section-chefs";
+@import "./layouts/section-recipes";
+@import "./layouts/section-social";
+@import "./layouts/footer";
+

@@ -1,0 +1,23 @@
+.chefs {
+  // .chefs__container
+  &__container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+  // .chefs__body
+  &__body {
+    text-align: center;
+  }
+  // .chefs__title-block
+  &__title-block {}
+  // .chefs__block
+  &__block {
+    display: flex;
+    gap: 30px;
+    padding: 60px 0 30px 0;
+  }
+  // .chefs__card
+  &__card {
+  }
+}

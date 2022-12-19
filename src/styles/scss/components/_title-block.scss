@@ -1,0 +1,37 @@
+.title-block {
+  position: relative;
+  width: 100%;
+
+  // .title-block__title
+  &__title {
+    font-family: $fontFamilyBlack;
+    font-size: 10rem;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    color: $color-title;
+    text-transform: uppercase;
+  }
+
+  // .title-block__subtitle
+  &__subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 3.6rem;
+    line-height: 4.17;
+    letter-spacing: 0.2em;
+    color: $color-subtitle;
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $color-main-primary;
+  }
+}

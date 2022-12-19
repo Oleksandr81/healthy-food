@@ -1,0 +1,29 @@
+.button-order {
+  
+  // .button-order__text
+  &__text {
+    font-family: $fontFamilyBlack;
+    font-size: 1rem;
+    line-height: 4;
+    letter-spacing: 0.2em;
+    background-color: $color-paragraph;
+    padding: 0px 32px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: $color-text;
+    border: 2px solid $color-title;
+  }
+
+  // .button-order__text-active
+  &__text-active {
+    font-family: $fontFamilyBlack;
+    font-size: 1rem;
+    line-height: 4;
+    letter-spacing: 0.2em;
+    background-color: $color-main-primary;
+    padding: 0px 32px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: $color-paragraph;
+  }
+}

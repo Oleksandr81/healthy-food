@@ -1,0 +1,20 @@
+.menu {
+  // .menu__list
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    color: $color-text-primary;
+    font-family: $fontFamilyBolt;
+    line-height: 6.43;
+  }
+
+  &__link-active {
+    color: $color-main-primary;
+  }
+}

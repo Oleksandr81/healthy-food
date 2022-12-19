@@ -1,0 +1,81 @@
+.dishes-cards {
+
+  // .dishes-cards__card-dish
+  &__card-dish {}
+}
+
+.card-dish {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  background-color: $color-paragraph;
+  width: 350px;
+  text-align: left;
+
+  // .card-dish__img
+  &__img {
+    width: 350px;
+    height: 260px;
+  }
+
+  // .card-dish__description
+  &__description {
+    padding: 30px 30px 20px 30px;
+  }
+
+  // .card-dish__title
+  &__title {
+    font-size: 3.2rem;
+    line-height: 0.9375;
+    color: $color-subtitle;
+  }
+
+  // .card-dish__subtitle
+  &__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.33;
+    letter-spacing: -0.15px;
+    color: $color-text;
+  }
+
+  // .card-dish__text
+  &__text {
+    font-size: 1.3rem;
+    line-height: 1.38;
+    letter-spacing: -0.1625px;
+    color: $color-text;
+    max-height: 54px;
+    padding: 20px 0;
+  }
+
+  // .card-dish__oder-block
+  &__oder-block {
+    padding: 24px 24px 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .card-dish__reiting
+  &__reiting {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__stars-active {
+    filter: invert(15%) sepia(66%) saturate(550%) hue-rotate(350deg) brightness(100%) contrast(96%);
+  }
+
+  // .card-dish__voice
+  &__voice {
+    font-family: $fontFamilyBlack;
+    font-size: 1.2rem;
+    line-height: 2.5;
+    letter-spacing: 0.125;
+    color: $color-text;
+  }
+
+  // .card-dish__button
+  &__button {}
+}

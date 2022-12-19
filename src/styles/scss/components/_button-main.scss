@@ -1,0 +1,12 @@
+.button-main {
+  // .button-main__text
+  &__text {
+    font-family: $fontFamilyBolt;
+    font-size: 1.8rem;
+    line-height: 1.22;
+    color: $color-main;
+    background-color: $color-main-primary;
+    padding: 25px 58px;
+    border-radius: 43px;
+  }
+}

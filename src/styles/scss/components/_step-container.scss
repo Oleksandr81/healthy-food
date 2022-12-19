@@ -1,0 +1,67 @@
+.steps {
+
+  // .steps__blocks
+  &__blocks {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.step {
+
+  // .step__block
+  &__block {
+    background-color: $color-paragraph;
+    border-radius: 6px;
+    height: 206px;
+    max-width: 255px;
+  }
+
+  &__block-active {
+    background-color: $color-main-primary;
+  }
+
+  // .step__container
+  &__container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  // .step__title
+  &__title {
+    font-size: 2.2rem;
+    line-height: 1.18;
+    letter-spacing: -0.275px;
+    color: $color-text-primary;
+  }
+
+  &__title-active {
+    color: $color-main;
+  }
+
+  // .step__line
+  &__line {
+    width: 56px;
+    height: 2px;
+    background-color: $color-main-primary;
+    margin: 15px 0 24px;
+  }
+
+  &__line-active {
+    background-color: $color-main;
+  }
+
+  // .step__text
+  &__text {
+    font-size: 1.3rem;
+    line-height: 1.38;
+    letter-spacing: -0.1625px;
+    color: $color-text;
+  }
+
+  &__text-active {
+    color: $color-main;
+  }
+}

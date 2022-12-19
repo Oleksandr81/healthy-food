@@ -1,0 +1,47 @@
+.chefs {
+
+  // .chefs__card
+  &__card {}
+}
+
+.card-chef {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  // .card-chef__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  // .card-chef__description
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  // .card-chef__name
+  &__name {
+    font-size: 1.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.225px;
+    color: $color-text-primary;
+  }
+
+  // .card-chef__prof
+  &__prof {
+    font-size: 1.2rem;
+    line-height: 1.33;
+    letter-spacing: -0.15px;
+    color: $color-text;
+  }
+
+  // .card-chef__img
+  &__img {
+    display: flex;
+    gap: 30px;
+  }
+}

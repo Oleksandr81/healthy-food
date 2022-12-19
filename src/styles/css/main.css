@@ -1,0 +1,785 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-box-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Roman";
+  src: url("../../fonts/HelveticaNeue-Roman.eot");
+  src: local("☺"), url("../../fonts/HelveticaNeue-Roman.woff") format("woff"), url("../../fonts/HelveticaNeue-Roman.ttf") format("truetype"), url("../../fonts/HelveticaNeue-Roman.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Condensed Bold";
+  src: url("../../fonts/Helvetica Neue Condensed Bold.eot");
+  src: local("☺"), url("../../fonts/Helvetica Neue Condensed Bold.woff") format("woff"), url("../../fonts/Helvetica Neue Condensed Bold.ttf") format("truetype"), url("../../fonts/Helvetica Neue Condensed Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Condensed Black";
+  src: url("../../fonts/Helvetica Neue Condensed Black.eot");
+  src: local("☺"), url("../../fonts/Helvetica Neue Condensed Black.woff") format("woff"), url("../../fonts/Helvetica Neue Condensed Black.ttf") format("truetype"), url("../../fonts/Helvetica Neue Condensed Black.svg") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue Roman";
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.page__wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.menu__list {
+  display: flex;
+  gap: 50px;
+}
+.menu__link {
+  color: #ffffff;
+  font-family: "Helvetica Neue Condensed Bold";
+  line-height: 6.43;
+}
+.menu__link-active {
+  color: #34c759;
+}
+
+.contact-main__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact__logo {
+  padding-bottom: 16px;
+}
+.contact__text {
+  font-size: 1.6rem;
+  line-height: 1.875;
+}
+.contact__subtext {
+  font-size: 1.4rem;
+  line-height: 1.875;
+  opacity: 0.5;
+}
+
+.button-main__text {
+  font-family: "Helvetica Neue Condensed Bold";
+  font-size: 1.8rem;
+  line-height: 1.22;
+  color: #1a1a1a;
+  background-color: #34c759;
+  padding: 25px 58px;
+  border-radius: 43px;
+}
+
+.title-block {
+  position: relative;
+  width: 100%;
+}
+.title-block__title {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 10rem;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  color: #303030;
+  text-transform: uppercase;
+}
+.title-block__subtitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 3.6rem;
+  line-height: 4.17;
+  letter-spacing: 0.2em;
+  color: #d9d9d9;
+}
+.title-block__line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #34c759;
+}
+
+.slider-dish {
+  position: relative;
+}
+.slider-dish__prev-btn {
+  position: absolute;
+  left: -132px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.slider-dish__next-btn {
+  position: absolute;
+  right: -132px;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.slider-dish__wrapper {
+  display: flex;
+  gap: 35px;
+}
+.slider-dish__slide {
+  width: 350px;
+  height: 270px;
+}
+
+.steps__blocks {
+  display: flex;
+  gap: 30px;
+}
+
+.step__block {
+  background-color: #252525;
+  border-radius: 6px;
+  height: 206px;
+  max-width: 255px;
+}
+.step__block-active {
+  background-color: #34c759;
+}
+.step__container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.step__title {
+  font-size: 2.2rem;
+  line-height: 1.18;
+  letter-spacing: -0.275px;
+  color: #ffffff;
+}
+.step__title-active {
+  color: #1a1a1a;
+}
+.step__line {
+  width: 56px;
+  height: 2px;
+  background-color: #34c759;
+  margin: 15px 0 24px;
+}
+.step__line-active {
+  background-color: #1a1a1a;
+}
+.step__text {
+  font-size: 1.3rem;
+  line-height: 1.38;
+  letter-spacing: -0.1625px;
+  color: #a6a6a6;
+}
+.step__text-active {
+  color: #1a1a1a;
+}
+
+.card-dish {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  background-color: #252525;
+  width: 350px;
+  text-align: left;
+}
+.card-dish__img {
+  width: 350px;
+  height: 260px;
+}
+.card-dish__description {
+  padding: 30px 30px 20px 30px;
+}
+.card-dish__title {
+  font-size: 3.2rem;
+  line-height: 0.9375;
+  color: #d9d9d9;
+}
+.card-dish__subtitle {
+  font-size: 1.2rem;
+  line-height: 1.33;
+  letter-spacing: -0.15px;
+  color: #a6a6a6;
+}
+.card-dish__text {
+  font-size: 1.3rem;
+  line-height: 1.38;
+  letter-spacing: -0.1625px;
+  color: #a6a6a6;
+  max-height: 54px;
+  padding: 20px 0;
+}
+.card-dish__oder-block {
+  padding: 24px 24px 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-dish__reiting {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.card-dish__stars-active {
+  filter: invert(15%) sepia(66%) saturate(550%) hue-rotate(350deg) brightness(100%) contrast(96%);
+}
+.card-dish__voice {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 1.2rem;
+  line-height: 2.5;
+  letter-spacing: 0.125;
+  color: #a6a6a6;
+}
+.button-order__text {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 1rem;
+  line-height: 4;
+  letter-spacing: 0.2em;
+  background-color: #252525;
+  padding: 0px 32px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #a6a6a6;
+  border: 2px solid #303030;
+}
+.button-order__text-active {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 1rem;
+  line-height: 4;
+  letter-spacing: 0.2em;
+  background-color: #34c759;
+  padding: 0px 32px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #252525;
+}
+
+.card-chef {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.card-chef__logo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.card-chef__description {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card-chef__name {
+  font-size: 1.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.225px;
+  color: #ffffff;
+}
+.card-chef__prof {
+  font-size: 1.2rem;
+  line-height: 1.33;
+  letter-spacing: -0.15px;
+  color: #a6a6a6;
+}
+.card-chef__img {
+  display: flex;
+  gap: 30px;
+}
+
+.recipes__left-side {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 90px;
+  flex: 0 1 50%;
+  align-items: center;
+  text-align: center;
+  max-width: 540px;
+}
+
+.left-side-recipes {
+  position: relative;
+}
+.left-side-recipes__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -5;
+}
+.left-side-recipes__btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.left-side-recipes__title {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 1rem;
+  line-height: 2.5;
+  letter-spacing: 1.25px;
+  color: #ffffff;
+  padding: 0px 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.left-side-recipes__date {
+  font-size: 1.4rem;
+  line-height: 2.14;
+  color: #ffffff;
+  padding: 65px 0 25px 0;
+}
+.left-side-recipes__text {
+  font-size: 2.4rem;
+  line-height: 1.67;
+  color: #ffffff;
+}
+.left-side-recipes__author {
+  font-size: 1.4rem;
+  line-height: 2.14;
+  padding: 45px 0 60px 0;
+}
+.left-side-recipes__revision {
+  display: flex;
+  gap: 27px;
+}
+.left-side-recipes__watch-block {
+  display: flex;
+  gap: 14px;
+}
+.left-side-recipes__number {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2.5;
+}
+.right-side-recipes__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.right-side-recipes__block {
+  position: relative;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px 30px 20px 30px;
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.right-side-recipes__block_green {
+  background: #34c759;
+}
+.right-side-recipes__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.right-side-recipes__text {
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  text-align: left;
+  z-index: 1;
+}
+.right-side-recipes__text_green {
+  color: #252525;
+}
+.right-side-recipes__information {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+.right-side-recipes__main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.right-side-recipes__title {
+  font-family: "Helvetica Neue Condensed Black";
+  font-size: 1rem;
+  line-height: 2.5;
+  letter-spacing: 1.25px;
+  color: #ffffff;
+  padding: 0px 16px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.right-side-recipes__title_green {
+  background-color: rgb(0, 0, 0);
+}
+.right-side-recipes__date {
+  font-size: 1.2rem;
+  line-height: 2.08;
+  color: #a6a6a6;
+}
+.right-side-recipes__date_green {
+  color: #252525;
+}
+
+.left-side-recipes {
+  display: flex;
+}
+.left-side-recipes__watch-block {
+  display: flex;
+}
+.left-side-recipes__img_green {
+  filter: invert(90%) sepia(3%) saturate(0%) hue-rotate(28deg) brightness(95%) contrast(100%);
+}
+.left-side-recipes__number {
+  font-family: "Helvetica Neue Condensed Bold";
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #D8D8D8;
+}
+.left-side-recipes__number_green {
+  color: #252525;
+}
+
+.social__box {
+  max-width: 350px;
+  min-height: 330px;
+  background-color: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+.social__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+.social__link {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.social__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #303030;
+}
+.social__content {
+  padding: 20px 25px;
+  font-size: 1.4rem;
+  line-height: 2.14;
+  text-align: left;
+  max-height: 210px;
+  overflow: hidden;
+}
+.social__content-insta {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.social__content-insta img {
+  width: 115px;
+  height: 115px;
+}
+.social__content-insta-img {
+  position: relative;
+}
+.social__content-insta-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.social__content-insta-arrow img {
+  width: 40px;
+  height: 40px;
+}
+.social__date {
+  color: #737373;
+}
+.social__text {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 0;
+}
+.social__nick {
+  color: #34c759;
+}
+
+.button-order__text {
+  padding: 0px 18px;
+}
+
+.header__container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+.main__container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.main__block {
+  display: flex;
+  flex-direction: column;
+  max-width: 870px;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: 80px 0 160px 0;
+}
+.main__title {
+  font-family: "Helvetica Neue Condensed Bold";
+  font-size: 7.2rem;
+  line-height: 1.21;
+  letter-spacing: 0.1em;
+}
+.main__title-normal {
+  font-family: "Helvetica Neue Roman";
+}
+.main__text {
+  max-width: 520px;
+  line-height: 1.625;
+  letter-spacing: -0.2px;
+  opacity: 0.7;
+  font-size: 1.6rem;
+  padding-top: 16px;
+}
+.main__text-upper-case {
+  text-transform: uppercase;
+}
+.main__button {
+  padding: 40px 0 70px 0;
+}
+.main__contact {
+  display: flex;
+  gap: 90px;
+  width: 100%;
+}
+
+.about__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  background-color: #252525;
+  padding-top: 60px;
+}
+.about__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about__text {
+  font-size: 1.6rem;
+  line-height: 1.875;
+  color: #a6a6a6;
+  max-width: 735px;
+  text-align: center;
+}
+.about__slider-dish {
+  padding: 90px 0 90px;
+}
+
+.work__container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.work__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 60px 0 30px;
+}
+.work__steps {
+  padding-top: 60px;
+}
+
+.dishes__conteiner {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.dishes__block {
+  text-align: center;
+}
+.dishes__dishes-cards {
+  padding: 60px 0 30px;
+}
+
+.dishes-cards__block {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.chefs__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.chefs__body {
+  text-align: center;
+}
+.chefs__block {
+  display: flex;
+  gap: 30px;
+  padding: 60px 0 30px 0;
+}
+.recipes__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.recipes__body {
+  text-align: center;
+}
+.recipes__block {
+  display: flex;
+  gap: 30px;
+  padding: 60px 0 30px 0;
+}
+.social__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.social__body {
+  text-align: center;
+}
+.social__block {
+  padding: 60px 0 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background: #252525;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.footer__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footer__contact {
+  display: flex;
+  justify-content: space-between;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 30px 0 60px;
+}
+.footer__text {
+  padding-bottom: 10px;
+  font-size: 12px;
+  line-height: 60px;
+  color: #a6a6a6;
+}
+
+/*# sourceMappingURL=main.css.map */
