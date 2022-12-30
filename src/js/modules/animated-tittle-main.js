@@ -10,7 +10,7 @@ const animatedTittle = () => {
   for (let i = 0; i < arrTitle.length; i++) {
     const span = document.createElement('span');
     
-    if (i !== arrTitle.length - 1) {
+    if (i !== arrTitle.length - 1 && i !== 2) {
       span.innerHTML = arrTitle[i] + '&nbsp';
     } else {
       span.innerHTML = arrTitle[i];
