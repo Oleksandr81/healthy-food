@@ -1,4 +1,5 @@
 .main {
+
   // position: relative;
   // .main__bg
   &__bg {
@@ -31,7 +32,12 @@
     font-size: 7.2rem;
     line-height: 1.21;
     letter-spacing: 0.1em;
+
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   }
+
+  
 
   // .main__title-normal
   &__title-normal {
@@ -63,5 +69,18 @@
     display: flex;
     gap: 90px;
     width: 100%;
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }
