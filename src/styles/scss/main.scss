@@ -9,7 +9,7 @@
 // Components
 @import "./components/menu-navigation";
 @import "./components/contact-main";
-@import "./components/button-main";
+@import "./components/button-main.scss";
 @import "./components/title-block";
 @import "./components/slider-dish";
 @import "./components/step-container";
@@ -19,6 +19,7 @@
 @import "./components/recipes-left-side";
 @import "./components/recipes-right-side";
 @import "./components/social-conteiner";
+@import "./components/example-btn";
 
 
 // Layouts
@@ -32,4 +33,3 @@
 @import "./layouts/section-recipes";
 @import "./layouts/section-social";
 @import "./layouts/footer";
-

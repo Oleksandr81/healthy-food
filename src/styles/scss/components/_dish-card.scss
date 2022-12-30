@@ -5,22 +5,47 @@
 }
 
 .card-dish {
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
   background-color: $color-paragraph;
   width: 350px;
   text-align: left;
+  height: 493px;
+  justify-content: end;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+
 
   // .card-dish__img
-  &__img {
-    width: 350px;
-    height: 260px;
+  &__img img {
+    // transition: all 0.4s ease-out;
+  }
+
+  &:hover &__img img {
+    position: absolute;
+    transform: scale(1.2);
+    top: -50px;
+    left: 0;
+    opacity: 0.5;
+    transition: all 0.4s ease-out;
   }
 
   // .card-dish__description
   &__description {
-    padding: 30px 30px 20px 30px;
+    position: relative;
+    padding: 30px 30px 0px 30px;
+    background-color: $color-paragraph;
+    z-index: 1;
+    height: 149px;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+  }
+
+  &:hover &__description {
+    height: 250px;
+    transition: all 0.3s ease-out;
   }
 
   // .card-dish__title
@@ -45,12 +70,38 @@
     letter-spacing: -0.1625px;
     color: $color-text;
     max-height: 54px;
-    padding: 20px 0;
+    margin: 20px 0;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: none;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $color-title;
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+
+  &:hover &__text {
+    overflow: auto;
+    max-height: 146px;
   }
 
   // .card-dish__oder-block
   &__oder-block {
-    padding: 24px 24px 24px 30px;
+    padding: 16px 24px 24px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +114,7 @@
     gap: 14px;
   }
 
-  &__stars-active {
+  &__stars_active {
     filter: invert(15%) sepia(66%) saturate(550%) hue-rotate(350deg) brightness(100%) contrast(96%);
   }
 

@@ -6,10 +6,12 @@
   "name": "healthy-food",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "^4.11.1"
+  },
   "scripts": {
     "style": "sass --watch src/styles/scss/main.scss src/styles/css/main.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",

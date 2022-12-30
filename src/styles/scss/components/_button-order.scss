@@ -1,7 +1,15 @@
-.button-order {
-  
-  // .button-order__text
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-dish {
+  border-radius: 30px;
+  border: 2px solid $color-title;
+
+  // .button-dish__text
   &__text {
+    position: relative;
     font-family: $fontFamilyBlack;
     font-size: 1rem;
     line-height: 4;
@@ -11,19 +19,40 @@
     border-radius: 30px;
     text-transform: uppercase;
     color: $color-text;
-    border: 2px solid $color-title;
+    
+    transition: all 0.3s ease-out;
+    // overflow: hidden;
+    z-index: 5;
+
+    &:hover {
+      color: $color-paragraph;
+      background-color: rgba(0,0,0,0);
+      padding: 0 22px 0 42px;
+    }
   }
 
-  // .button-order__text-active
-  &__text-active {
-    font-family: $fontFamilyBlack;
-    font-size: 1rem;
-    line-height: 4;
-    letter-spacing: 0.2em;
-    background-color: $color-main-primary;
-    padding: 0px 32px;
+  &:hover &__img {
+    left: 0;
+  }
+
+  &__img {
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+    height: 100%;
+    z-index: 2;
+    left: -185px;
+    top: 0;
     border-radius: 30px;
-    text-transform: uppercase;
-    color: $color-paragraph;
+    background-color: $color-main-primary;
+    width: 100%;
+    transition: all 0.3s ease;
+  
+    & img {
+      widows: 17px;
+      height: 17px;
+    }
   }
 }
