@@ -1,0 +1,34 @@
+.fadeIn {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-fill-mode:forwards
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fadeInDown {
+  position: relative;
+  opacity: 0;
+  animation-name: fadeInDown;
+  animation-fill-mode:forwards
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    bottom: -50px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
