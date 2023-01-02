@@ -26,7 +26,7 @@ const animatedTittle = () => {
       title.append(span);
     }
   }
-
+  
   animatedTitle('.main__title', 0.1);
 };
 

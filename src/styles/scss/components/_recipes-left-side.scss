@@ -2,6 +2,7 @@
 
   // .recipes__left-side
   &__left-side {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     padding: 60px 90px;
@@ -9,6 +10,8 @@
     align-items: center;
     text-align: center;
     max-width: 540px;
+    max-height: 540px;
+    overflow: hidden;
   }
 }
 

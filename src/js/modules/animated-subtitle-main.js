@@ -25,6 +25,4 @@ const subtitleAnimation = () => {
   typeText('.main__text', 40, 2000);
 };
 
-
-
 export default subtitleAnimation;

@@ -9,14 +9,27 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    transition: all 0.1s ease-out;
 
     &.prev-btn {
+      background: url('../../image/icon/arrow-prev.svg') 0 0 no-repeat;
       left: -132px;
+
+      &:hover {
+        background: url('../../image/icon/arrow-prev-active.svg') 0 0 no-repeat;
+      }
     }
     // .slider-dish__next-btn
     &.next-btn {
       right: -132px;
+      background: url('../../image/icon/arrow-next.svg') 0 0 no-repeat;
+
+      &:hover {
+        background: url('../../image/icon/arrow-next-active.svg') 0 0 no-repeat;
+      }
     }
   }
   

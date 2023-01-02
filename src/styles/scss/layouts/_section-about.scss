@@ -1,5 +1,6 @@
 .about {
 
+
   // .about__container
   &__container {
     max-width: 1110px;
@@ -19,17 +20,9 @@
   // .about__title-block
   &__title-block {}
 
-  // .about__text
-  &__text {
-    font-size: 1.6rem;
-    line-height: 1.875;
-    color: $color-text;
-    max-width: 735px;
-    text-align: center;
-  }
-
   // .about__slider-dish
   &__slider-dish {
+    opacity: 0;
     padding: 90px 0 90px;
   }
 }

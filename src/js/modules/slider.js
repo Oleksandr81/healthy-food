@@ -68,6 +68,7 @@ const slider = () => {
 
     btnNext.addEventListener('click', () => {
       nextSlide(1);
+
     });
 
     btnPrev.addEventListener('click', () => {

@@ -1,7 +1,7 @@
 .fadeIn {
   opacity: 0;
   animation-name: fadeIn;
-  animation-fill-mode:forwards
+  animation-fill-mode: forwards
 }
 
 @keyframes fadeIn {
@@ -9,6 +9,7 @@
     opacity: 0;
     visibility: hidden;
   }
+
   to {
     opacity: 1;
     visibility: visible;
@@ -19,7 +20,7 @@
   position: relative;
   opacity: 0;
   animation-name: fadeInDown;
-  animation-fill-mode:forwards
+  animation-fill-mode: forwards
 }
 
 @keyframes fadeInDown {
@@ -27,8 +28,51 @@
     opacity: 0;
     bottom: -50px;
   }
+
   to {
     opacity: 1;
     bottom: 0;
+  }
+}
+
+.fadeInUpDown {
+  animation-name: fadeInUpDown;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@keyframes fadeInUpDown {
+  from {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  to {
+    max-height: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.fadeInLeft {
+  position: relative;
+  animation-name: fadeInLeft;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
   }
 }
