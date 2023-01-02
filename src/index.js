@@ -3,6 +3,7 @@ import subtitleAnimation from "./js/modules/animated-subtitle-main";
 import showElement from "./js/modules/animated-show-element";
 import slider from "./js/modules/slider";
 import animatedPage from "./js/modules/animated-page";
+import scrolling from "./js/modules/scrolling";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -12,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   subtitleAnimation();
   showElement();
   slider();
-
+  scrolling();
 
 
 });

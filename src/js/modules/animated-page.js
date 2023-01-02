@@ -39,6 +39,9 @@ const animatedPage = () => {
         }
       });
 
+      console.log(workBlock.offsetTop - window.pageYOffset);
+      console.log('get: ' + workBlock.getBoundingClientRect().bottom);
+      
       if ((workBlock.offsetTop - window.pageYOffset) <= 750) {
         showElement('.step__block', 'fadeInDown', 1, 0.5, 0.2);
       }
@@ -58,7 +61,7 @@ const animatedPage = () => {
       if ((recipeBlock.offsetTop - window.pageYOffset) <= 750) {
         showElement('.recipes__left-side', 'fadeInLeft', 1, 0.5);
       }
-      console.log(socialBlock.offsetTop - window.pageYOffset);
+      
       if ((socialBlock.offsetTop - window.pageYOffset) <= 750) {
         showElement('.social__box', 'fadeIn', 1, 0.5, 0.5);
       }      
