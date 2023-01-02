@@ -153,70 +153,6 @@ body._lock {
   opacity: 0.5;
 }
 
-.button {
-  position: relative;
-  overflow: hidden;
-}
-
-.button-main {
-  border-radius: 43px;
-  border: 1px solid #a6a6a6;
-}
-.button-main__text {
-  position: relative;
-  width: 185px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 43px;
-  padding: 25px 0;
-  font-family: "Helvetica Neue Condensed Bold";
-  font-size: 1.8rem;
-  line-height: 1.22;
-  letter-spacing: 0.2em;
-  white-space: nowrap;
-  color: #a6a6a6;
-  z-index: 5;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.button-main__text:hover {
-  color: #252525;
-  background-color: rgba(0, 0, 0, 0);
-  padding-left: 35px;
-  letter-spacing: 0.05em;
-}
-.button-main:hover .button-main__img {
-  left: 0;
-}
-.button-main__img {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 25px;
-  height: 75px;
-  z-index: 2;
-  left: -185px;
-  top: 0;
-  border-radius: 43px;
-  background-color: #34c759;
-  width: 100%;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.button-main__img img {
-  widows: 27px;
-  height: 27px;
-}
-
 .title-block {
   position: relative;
   width: 100%;
@@ -522,20 +458,20 @@ body._lock {
 .button {
   position: relative;
   overflow: hidden;
-}
-
-.button-dish {
   border-radius: 30px;
   border: 2px solid #303030;
 }
-.button-dish__text {
+.button.button-main {
+  border-radius: 43px;
+  border: 1px solid #a6a6a6;
+}
+.button__text {
   position: relative;
   font-family: "Helvetica Neue Condensed Black";
   font-size: 1rem;
   line-height: 4;
   letter-spacing: 0.2em;
   background-color: #252525;
-  padding: 0px 32px;
   border-radius: 30px;
   text-transform: uppercase;
   color: #a6a6a6;
@@ -544,15 +480,37 @@ body._lock {
   transition: all 0.3s ease-out;
   z-index: 5;
 }
-.button-dish__text:hover {
-  color: #252525;
-  background-color: rgba(0, 0, 0, 0);
+.button__text.text-social {
+  padding: 0px 18px;
+}
+.button__text.text-main {
+  font-family: "Helvetica Neue Condensed Bold";
+  font-size: 1.8rem;
+  line-height: 1.22;
+  letter-spacing: 0.2em;
+  border-radius: 43px;
+  padding: 25px 0;
+  width: 185px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.button__text.text-main:hover {
+  padding-left: 35px;
+  letter-spacing: 0.05em;
+}
+.button__text.text-dish {
+  padding: 0px 32px;
+}
+.button__text.text-dish:hover {
   padding: 0 22px 0 42px;
 }
-.button-dish:hover .button-dish__img {
+.button__text:hover {
+  color: #252525;
+  background-color: rgba(0, 0, 0, 0);
+}
+.button:hover .button__img {
   left: 0;
 }
-.button-dish__img {
+.button__img {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,9 +533,13 @@ body._lock {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.button-dish__img img {
+.button__img img {
   widows: 17px;
   height: 17px;
+}
+.button__img.img-main img {
+  widows: 27px;
+  height: 27px;
 }
 
 .card-chef {
@@ -861,6 +823,38 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: inherit;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.social__link.link-instagram:hover .social__logo {
+  background: url("../../image/icon/instagram-active.svg") 0 0 no-repeat;
+}
+.social__link.link-facebook:hover .social__logo {
+  background: url("../../image/icon/facebook-active.svg") 0 0 no-repeat;
+}
+.social__link.link-twitter:hover .social__logo {
+  background: url("../../image/icon/twitter-active.svg") 0 0 no-repeat;
+}
+.social__link:hover {
+  color: #34c759;
+}
+.social__logo {
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.social__logo.logo-facebook {
+  background: url("../../image/icon/facebook.svg") 0 0 no-repeat;
+}
+.social__logo.logo-twitter {
+  background: url("../../image/icon/twitter.svg") 0 0 no-repeat;
+}
+.social__logo.logo-instagram {
+  background: url("../../image/icon/instagram.svg") 0 0 no-repeat;
 }
 .social__line {
   display: block;
