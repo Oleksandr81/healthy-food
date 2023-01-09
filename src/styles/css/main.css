@@ -354,17 +354,32 @@ body._lock {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.card-dish:hover .card-dish__img img {
-  position: absolute;
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  top: -50px;
-  left: 0;
+.card-dish__img {
+  background: url("../../image/dish/dish-2.png");
+  height: 260px;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.card-dish:hover .card-dish__img {
+  background-position: 0 -50px;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.card-dish__img-mask {
+  background-color: #000000;
+  opacity: 0;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.card-dish:hover .card-dish__img-mask {
   opacity: 0.5;
-  -webkit-transition: all 0.4s ease-out;
-  -o-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .card-dish__description {
   position: relative;
@@ -378,7 +393,7 @@ body._lock {
   overflow: hidden;
 }
 .card-dish:hover .card-dish__description {
-  height: 250px;
+  height: 360px;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -434,6 +449,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #252525;
 }
 .card-dish__reiting {
   display: -webkit-box;

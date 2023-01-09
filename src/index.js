@@ -4,6 +4,7 @@ import showElement from "./js/modules/animated-show-element";
 import slider from "./js/modules/slider";
 import animatedPage from "./js/modules/animated-page";
 import scrolling from "./js/modules/scrolling";
+import cards from "./js/modules/cards";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showElement();
   slider();
   scrolling();
+  cards();
 
 
 });

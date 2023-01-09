@@ -1,6 +1,6 @@
-const dishCardInfo = [
+export const dishCardInfo = [
   {
-    "img": "src/image/dish/dish-1.png",
+    "img": "dish-1.png",
     "altimg": "dish-1",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -9,7 +9,7 @@ const dishCardInfo = [
     "voice": 15
   },
   {
-    "img": "src/image/dish/dish-2.png",
+    "img": "dish-2.png",
     "altimg": "dish-2",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -18,7 +18,7 @@ const dishCardInfo = [
     "voice": 24
   },
   {
-    "img": "src/image/dish/dish-3.png",
+    "img": "dish-3.png",
     "altimg": "dish-3",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -27,7 +27,7 @@ const dishCardInfo = [
     "voice": 5
   },
   {
-    "img": "src/image/dish/dish-4.png",
+    "img": "dish-4.png",
     "altimg": "dish-4",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -36,7 +36,7 @@ const dishCardInfo = [
     "voice": 155
   },
   {
-    "img": "src/image/dish/dish-5.png",
+    "img": "dish-5.png",
     "altimg": "dish-5",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -45,7 +45,7 @@ const dishCardInfo = [
     "voice": 10
   },
   {
-    "img": "src/image/dish/dish-6.png",
+    "img": "dish-6.png",
     "altimg": "dish-6",
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
@@ -55,4 +55,3 @@ const dishCardInfo = [
   }
 ];
 
-export default dishCardInfo;
