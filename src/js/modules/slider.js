@@ -60,7 +60,6 @@ const slider = () => {
     }
 
     function showSlideByTime() {
-
       moveSlide = setInterval(() => {
         btnNext.click();        
       }, 3000);
@@ -68,7 +67,6 @@ const slider = () => {
 
     btnNext.addEventListener('click', () => {
       nextSlide(1);
-
     });
 
     btnPrev.addEventListener('click', () => {

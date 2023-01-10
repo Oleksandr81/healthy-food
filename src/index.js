@@ -5,6 +5,7 @@ import slider from "./js/modules/slider";
 import animatedPage from "./js/modules/animated-page";
 import scrolling from "./js/modules/scrolling";
 import cards from "./js/modules/cards";
+import showUpMenu from "./js/modules/shom-up-menu";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -16,6 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
   slider();
   scrolling();
   cards();
-
+  showUpMenu();
 
 });

@@ -76,3 +76,35 @@
     left: 0;
   }
 }
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards
+}
+
+@keyframes fadeInUp {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.hideToUp {
+  animation-name: hideToUp;
+  animation-duration: 1s;
+  // animation-fill-mode: forwards
+}
+
+@keyframes hideToUp {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -100%;
+  }
+}

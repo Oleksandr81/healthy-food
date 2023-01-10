@@ -1061,11 +1061,74 @@ body._lock {
     left: 0;
   }
 }
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+.hideToUp {
+  -webkit-animation-name: hideToUp;
+          animation-name: hideToUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes hideToUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@keyframes hideToUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
 .header__container {
   max-width: 1110px;
   margin: 0 auto;
 }
+.header__mask {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: -1;
+}
 
+.header.show {
+  position: fixed;
+  width: 100%;
+  top: -100%;
+  z-index: 50;
+  background-color: rgba(37, 37, 37, 0.9);
+}
 .header__block {
   display: -webkit-box;
   display: -ms-flexbox;

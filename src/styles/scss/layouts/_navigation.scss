@@ -1,10 +1,22 @@
 .header {
+
+  &.show {
+    position: fixed;
+    width: 100%;
+    top: -100%;
+    z-index: 50;
+    background-color: rgba($color-paragraph, 0.9);
+  }
+  
+  
+
   // .header__block
   &__block {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   // .header__logo
   &__logo {
   }
