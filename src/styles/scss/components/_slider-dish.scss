@@ -18,6 +18,18 @@
       background: url('../../image/icon/arrow-prev.svg') 0 0 no-repeat;
       left: -132px;
 
+      @media(max-width: $md1) {
+        left: -92px;
+      }
+      @media(max-width: $md2) {
+        left: -132px;
+      }
+
+      @media(max-width: $md3) {
+        left: 80px;
+        top: 65px;
+      }
+
       &:hover {
         background: url('../../image/icon/arrow-prev-active.svg') 0 0 no-repeat;
       }
@@ -26,6 +38,19 @@
     &.next-btn {
       right: -132px;
       background: url('../../image/icon/arrow-next.svg') 0 0 no-repeat;
+
+      @media(max-width: $md1) {
+        right: -92px;
+      }
+      
+      @media(max-width: $md2) {
+        right: -132px;
+      }
+
+      @media(max-width: $md3) {
+        right: 80px;
+        top: 65px;
+      }
 
       &:hover {
         background: url('../../image/icon/arrow-next-active.svg') 0 0 no-repeat;
@@ -46,11 +71,24 @@
     display: flex;
     gap: 35px;
     transition: all 0.6s ease;
+
+    @media(max-width: $md2) {
+      width: 350px;
+    }
+    @media(max-width: $md4) {
+      width: 300px;
+      // height: 270px;
+    }
   }
   // .slider-dish__slide
   &__slide {
     width: 350px;
     height: 270px;
+
+    @media(max-width: $md4) {
+      width: 300px;
+      // height: 270px;
+    }
   }
 
   &__show-conteiner {

@@ -1,9 +1,10 @@
 .dishes {
   // .dishes__conteiner
   &__conteiner {
-    max-width: 1110px;
+    max-width: 1140px;
     margin: 0 auto;
     padding-top: 60px;
+    padding: 0 15px;
   }
   // .dishes__block
   &__block {
@@ -23,6 +24,7 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

@@ -1,0 +1,62 @@
+.menu {
+
+  // .menu__burger
+  &__burger {
+    display: none;
+    margin: 15px 0;
+
+    @media(max-width: $md3) {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      z-index: 3;
+      cursor: pointer;
+
+      & span,
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        content: "";
+        background-color: #fff;
+        height: 3px;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        top: 100%;
+      }
+
+      & span {
+        top: 50%;
+      }
+
+      &._active {
+
+        &::before {
+          top: 50%;
+          transform: rotate(45deg);
+          background-color: #fff;
+        }
+
+        &::after {
+          top: 50%;
+          transform: rotate(-45deg);
+          background-color: #fff;
+        }
+
+        & span {
+          transform: scale(0) translate(0, 50%);
+        }
+      }
+    }
+  }
+
+
+}

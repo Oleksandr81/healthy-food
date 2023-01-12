@@ -44,5 +44,11 @@
   &__img {
     display: flex;
     gap: 30px;
+
+    @media(max-width: 370px) {
+      &:last-child {
+        display: none;
+      }
+    }
   }
 }

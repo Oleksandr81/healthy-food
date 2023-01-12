@@ -1,9 +1,10 @@
 .chefs {
   // .chefs__container
   &__container {
-    max-width: 1110px;
+    max-width: 1140px;
     margin: 0 auto;
     padding-top: 60px;
+    padding: 0 15px;
   }
   // .chefs__body
   &__body {
@@ -14,8 +15,11 @@
   // .chefs__block
   &__block {
     display: flex;
-    gap: 30px;
+    row-gap: 50px;
+    column-gap: 30px;
     padding: 60px 0 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   // .chefs__card
   &__card {

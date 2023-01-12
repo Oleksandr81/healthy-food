@@ -4,6 +4,12 @@
   &__blocks {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media(max-width: $md1) {
+      
+    }
   }
 }
 
@@ -15,7 +21,15 @@
     background-color: $color-paragraph;
     border-radius: 6px;
     height: 206px;
-    max-width: 255px;
+    flex: 1 0 21%;
+
+    @media(max-width: $md1) {
+      flex: 0 0 35%;
+    }
+
+    @media(max-width: 590px) {
+      flex: 0 0 65%;
+    }
   }
 
   &__block-active {

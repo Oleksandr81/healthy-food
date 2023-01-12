@@ -22,14 +22,13 @@
 
   // .card-dish__img
   &__img {
-    background: url('../../image/dish/dish-2.png');
+    position: relative;
     height: 260px;
     transition: all 0.3s ease-out;
   }
 
   &:hover &__img {
-    background-position: 0 -50px;
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-50px);
   }
 
   &__img-mask {
@@ -56,7 +55,8 @@
   }
 
   &:hover &__description {
-    height: 360px;
+    height: 260px;
+    padding-top: 0;
     transition: all 0.3s ease-out;
   }
 
@@ -125,10 +125,6 @@
     display: flex;
     align-items: center;
     gap: 14px;
-  }
-
-  &__stars_active {
-    filter: invert(15%) sepia(66%) saturate(550%) hue-rotate(350deg) brightness(100%) contrast(96%);
   }
 
   // .card-dish__voice

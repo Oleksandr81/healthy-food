@@ -13,28 +13,27 @@
     letter-spacing: 0.2em;
     color: $color-title;
     text-transform: uppercase;
+
+    @media(max-width: $md5) {
+      font-size: 8rem;
+    }
   }
 
   // .title-block__subtitle
   &__subtitle {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     width: 100%;
     font-size: 3.6rem;
-    line-height: 4.17;
+    transform: translate(0, -50%);
     letter-spacing: 0.2em;
     color: $color-subtitle;
-  }
 
-    // .title-block__text
-    &__text {
-      font-size: 1.6rem;
-      line-height: 1.875;
-      color: $color-text;
-      max-width: 735px;
-      text-align: center;
+    @media(max-width: $md5) {
+      font-size: 3rem;
     }
+  }
 
   &__line {
     position: absolute;

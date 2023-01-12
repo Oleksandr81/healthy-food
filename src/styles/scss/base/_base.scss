@@ -1,5 +1,9 @@
 html {
   font-size: 10px;
+
+  @media(max-width: $md4) {
+    font-size: 8px;
+  }
 }
 body {
   font-size: $fontSize;

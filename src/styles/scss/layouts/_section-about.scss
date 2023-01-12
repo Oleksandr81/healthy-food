@@ -3,10 +3,11 @@
 
   // .about__container
   &__container {
-    max-width: 1110px;
+    max-width: 1140px;
     margin: 0 auto;
     background-color: $color-paragraph;
     padding-top: 60px;
+    padding: 0 15px;
   }
 
   // .about__block
@@ -20,9 +21,21 @@
   // .about__title-block
   &__title-block {}
 
+  &__text-block {
+    font-size: 1.6rem;
+    line-height: 1.875;
+    color: $color-text;
+    max-width: 735px;
+    text-align: center;
+  }
+
   // .about__slider-dish
   &__slider-dish {
     opacity: 0;
     padding: 90px 0 90px;
+
+    @media(max-width: $md3) {
+      padding-top: 120px;
+    }
   }
 }
