@@ -1,6 +1,8 @@
 const showUpMenu = () => {
   const header = document.querySelector('header'),
-    blockHeader = document.querySelector('.header__block');
+    blockHeader = document.querySelector('.header__block'),
+    burgerIcon = document.querySelector('.menu__burger'),
+    menu = document.querySelector('.menu__list');
 
   let timer = null,
     mouseY;
@@ -42,6 +44,9 @@ const showUpMenu = () => {
   function headerHide() {
     header.classList.add('hideToUp');
     header.classList.remove('fadeInUp');
+    document.body.style.overflow = '';
+    burgerIcon.classList.remove('_active');
+    menu.classList.remove('show-menu');
 
     timer = null;
   }

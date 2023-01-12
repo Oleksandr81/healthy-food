@@ -10,6 +10,10 @@ const menuBuger = (burgerSelector) => {
 
 
   burgerIcon.addEventListener('click', () => {
+    activeMenu();
+  });
+
+  function activeMenu() {
     burgerIcon.classList.toggle('_active');
     menu.classList.toggle('show-menu');
 
@@ -19,7 +23,7 @@ const menuBuger = (burgerSelector) => {
     } else {
       document.body.style.overflow = '';
     }    
-  });
+  }
 };
 
 export default menuBuger;

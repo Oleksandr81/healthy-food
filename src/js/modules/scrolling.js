@@ -1,4 +1,9 @@
+import menuBuger from "./menu-burger";
+
 const scrolling = () => {
+  const burgerIcon = document.querySelector('.menu__burger'),
+    menu = document.querySelector('.menu__list');
+
   let links = document.querySelectorAll('[href^="#"]'),
     speed = 0.3;
 
@@ -31,6 +36,10 @@ const scrolling = () => {
       e.preventDefault();
 
       removeActiveClass();
+
+      burgerIcon.classList.remove('_active');
+      menu.classList.remove('show-menu');
+      document.body.style.overflow = '';
 
       if (link.classList.contains('menu__link')) {
         link.classList.add('menu__link-active');
