@@ -534,6 +534,11 @@ body._lock {
   transition: all 0.3s ease-out;
   overflow: hidden;
 }
+@media (max-width: 500px) {
+  .card-dish__description {
+    height: 159px;
+  }
+}
 .card-dish:hover .card-dish__description {
   height: 260px;
   padding-top: 0;
@@ -1340,7 +1345,7 @@ body._lock {
           align-items: center;
 }
 .main {
-  min-height: 760px;
+  min-height: 100%;
 }
 .main__bg {
   background: url("../../image/main/bg.jpg") 0 0 no-repeat;
@@ -1350,6 +1355,12 @@ body._lock {
   z-index: -10;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 769px) {
+  .main__bg {
+    background: url("../../image/main/bg-tablet.jpg") 0 0 no-repeat;
+    height: 110%;
+  }
 }
 .main__container {
   max-width: 1140px;

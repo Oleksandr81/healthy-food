@@ -52,6 +52,10 @@
     height: 149px;
     transition: all 0.3s ease-out;
     overflow: hidden;
+
+    @media(max-width: $md4) {
+      height: 159px;
+    }
   }
 
   &:hover &__description {
@@ -83,6 +87,8 @@
     color: $color-text;
     max-height: 54px;
     margin: 20px 0;
+
+
 
     /* width */
     &::-webkit-scrollbar {

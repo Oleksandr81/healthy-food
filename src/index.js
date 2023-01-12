@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict';
   animatedTittle();
   animatedPage();
-  // subtitleAnimation();
+  subtitleAnimation();
   showElement();
   slider();
   scrolling();

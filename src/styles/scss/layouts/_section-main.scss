@@ -1,5 +1,5 @@
 .main {
-  min-height: 760px;
+  min-height: 100%;
 
   // position: relative;
   // .main__bg
@@ -11,6 +11,11 @@
     z-index: -10;
     height: 100%;
     width: 100%;
+
+    @media(max-width: $md3) {
+      background: url('../../image/main/bg-tablet.jpg') 0 0 no-repeat;
+      height: 110%;
+    }
   }
 
   // .main__wrapper
