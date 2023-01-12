@@ -11,6 +11,27 @@ body {
   color: $color-text-primary;
   background-color: $color-main;
 
+  /* width */
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-title;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-main;
+    // border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   &._lock {
     overflow: hidden;
   }
