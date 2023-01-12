@@ -11,6 +11,7 @@ const animatedPage = () => {
       recipesBlock = document.querySelectorAll('.right-side-recipes__block'),
       socialBox = document.querySelectorAll('.social__box'),
       socialBlock = document.querySelector('.social__block'),
+      aboutTextBlock = document.querySelector('.about__text-block'),
       arrTitleBlock = [];
 
     titleBlock.forEach((item, i) => {
@@ -36,12 +37,10 @@ const animatedPage = () => {
         if ((titleBlock[i].offsetTop - window.pageYOffset) <= 750) {
           showElement('.' + arrTitleBlock[i], 'fadeIn', 3, 0);
           showElement('.about__slider-dish', 'fadeIn', 3, 0);
+          showElement('.about__text-block', 'fadeIn', 3, 0);
         }
       });
 
-      // console.log(workBlock.offsetTop - window.pageYOffset);
-      // console.log('get: ' + workBlock.getBoundingClientRect().bottom);
-      
       if ((workBlock.offsetTop - window.pageYOffset) <= 750) {
         showElement('.step__block', 'fadeInDown', 1, 0.5, 0.2);
       }
