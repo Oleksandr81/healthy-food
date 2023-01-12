@@ -11,8 +11,8 @@ import menuBuger from "./js/modules/menu-burger";
 window.addEventListener('DOMContentLoaded', () => {
 
   'use strict';
-  // animatedTittle();
-  // animatedPage();
+  animatedTittle();
+  animatedPage();
   // subtitleAnimation();
   showElement();
   slider();

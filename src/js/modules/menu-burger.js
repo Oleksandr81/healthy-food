@@ -10,23 +10,15 @@ const menuBuger = (burgerSelector) => {
 
 
   burgerIcon.addEventListener('click', () => {
-    console.log(intViewportHeight);
-    console.log(menu);
-
     burgerIcon.classList.toggle('_active');
     menu.classList.toggle('show-menu');
 
     if (burgerIcon.classList.contains('_active')) {
       document.body.style.overflow = 'hidden';
-      
+      menu.style.height = `${intViewportHeight}px`;
     } else {
       document.body.style.overflow = '';
-    }
-
-    if (menu.classList.contains('show-menu')) {
-      menu.style.height = `${intViewportHeight}px`;
-    }
-    
+    }    
   });
 };
 

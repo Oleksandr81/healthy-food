@@ -9,16 +9,24 @@ const slider = () => {
       btnPrev = document.querySelector(btnPrevSelector),
       slides = document.querySelectorAll(slidesSelector);
 
-    let slideIndex = 0,
-      moveSlide;
+    let intViewportWidth = window.innerWidth,
+      slideIndex = 0,
+      moveSlide,
+      slidesLenght;
 
     function viewVisualSlide() {
       const block = document.createElement('div'),
-      sliderBox = document.querySelector('.slider-dish');
+        sliderBox = document.querySelector('.slider-dish');
+
+      if (intViewportWidth < 993) {
+        slidesLenght = slides.length;
+      } else {
+        slidesLenght = slides.length - 1;
+      }
 
       block.classList.add('slider-dish__show-conteiner');
 
-      for (let i = 0; i < slides.length - 1; i++) {
+      for (let i = 0; i < slidesLenght; i++) {
         const showBlock = document.createElement('div');
 
         showBlock.classList.add('slider-dish__show-block');
@@ -30,21 +38,27 @@ const slider = () => {
 
     function viewSlide(n) {
       const showBlock = document.querySelectorAll('.slider-dish__show-block');
-      
+
       if (n < 0) {
-        slideIndex = slides.length - 2;
+        slideIndex = slidesLenght - 1;
       }
 
-      if (n > slides.length - 2) {
+      if (n > slidesLenght - 1) {
         slideIndex = 0;
       }
 
-      sliderConteiner.style.left = `-${slideIndex * 385}px`;
+
+      if (intViewportWidth < 500) {
+        sliderConteiner.style.left = `-${slideIndex * 335}px`;
+      } else {
+        sliderConteiner.style.left = `-${slideIndex * 385}px`;
+      }
+
       showBlock[slideIndex].style.opacity = '0.8';
 
       showBlock.forEach((item, i) => {
         item.style.opacity = '0.1';
-        
+
         if (slideIndex === i) {
           item.style.opacity = '0.8';
         }
@@ -61,7 +75,7 @@ const slider = () => {
 
     function showSlideByTime() {
       moveSlide = setInterval(() => {
-        btnNext.click();        
+        btnNext.click();
       }, 3000);
     }
 
@@ -71,7 +85,7 @@ const slider = () => {
 
     btnPrev.addEventListener('click', () => {
       nextSlide(-1);
-    }); 
+    });
 
     slider.addEventListener('mouseenter', () => {
       clearInterval(moveSlide);

@@ -4,7 +4,6 @@ const scrolling = () => {
 
   window.addEventListener('scroll', () => {
     let toTop = document.documentElement.scrollTop;
-    console.log(toTop);
 
     if (toTop < 750) {
       removeActiveClass();
