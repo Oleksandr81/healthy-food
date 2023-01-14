@@ -67,8 +67,8 @@ const animatedPage = () => {
     });
   }
 
-  showElement('.main__button', 'fadeIn', 1, 9);
-  showElement('.contact-main__block', 'fadeInDown', 1, 9.8, 0.2);
+  showElement('.main__button', 'fadeIn', 1, 3);
+  showElement('.contact-main__block', 'fadeInDown', 1, 3.5, 0.2);
   animatedTitle();
 
 

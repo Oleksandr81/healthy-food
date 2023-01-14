@@ -7,6 +7,7 @@ import scrolling from "./js/modules/scrolling";
 import cards from "./js/modules/cards";
 import showUpMenu from "./js/modules/shom-up-menu";
 import menuBuger from "./js/modules/menu-burger";
+import changeActiveMenu from "./js/modules/change-active-menu";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -20,5 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
   cards();
   showUpMenu();
   menuBuger('.menu__burger');
+  changeActiveMenu();
 
 });

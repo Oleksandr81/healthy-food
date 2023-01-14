@@ -2,34 +2,14 @@ import menuBuger from "./menu-burger";
 
 const scrolling = () => {
   const burgerIcon = document.querySelector('.menu__burger'),
-    menu = document.querySelector('.menu__list');
+    menu = document.querySelector('.menu__list'),
+    titleBlocks = document.querySelectorAll('[data-page-menu]');
 
-  let links = document.querySelectorAll('[href^="#"]'),
+  let links = document.querySelectorAll('[data-menu-item]'),
     speed = 0.3;
 
-  window.addEventListener('scroll', () => {
-    let toTop = document.documentElement.scrollTop;
-
-    if (toTop < 750) {
-      removeActiveClass();
-      links[1].classList.add('menu__link-active');
-    } else if (toTop > 750 && toTop < 1900) {
-      removeActiveClass();
-      links[2].classList.add('menu__link-active');
-    } else if (toTop > 1900 && toTop < 3240) {
-      removeActiveClass();
-      links[3].classList.add('menu__link-active');
-    } else if (toTop > 3240 && toTop < 3650) {
-      removeActiveClass();
-      links[4].classList.add('menu__link-active');
-    } else if (toTop > 3650 && toTop < 4120) {
-      removeActiveClass();
-      links[5].classList.add('menu__link-active');
-    } else if (toTop > 4120) {
-      removeActiveClass();
-      links[6].classList.add('menu__link-active');
-    }
-  });
+  console.log(links);
+  
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -48,7 +28,7 @@ const scrolling = () => {
       let withTop = document.documentElement.scrollTop,
         hash = link.getAttribute('href'),
         toBlock = document.querySelector(hash).getBoundingClientRect().top,
-        start = null;
+        start = null;     
 
       requestAnimationFrame(step);
 
@@ -72,7 +52,7 @@ const scrolling = () => {
   });
 
   function removeActiveClass() {
-    links.forEach(link => {
+    titleBlocks.forEach(link => {
       if (link.classList.contains('menu__link')) {
         link.classList.remove('menu__link-active');
       }

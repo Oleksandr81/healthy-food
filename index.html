@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="header__mask"></div>
     <div class="header__container">
@@ -20,12 +19,13 @@
         </a>
         <nav class="header__menu menu">
           <ul class="menu__list">
-            <li class="menu__item"><a href="#about" class="menu__link menu__link-active">About</a></li>
-            <li class="menu__item"><a href="#work" class="menu__link">Work</a></li>
-            <li class="menu__item"><a href="#dishes" class="menu__link">Dishes</a></li>
-            <li class="menu__item"><a href="#chefs" class="menu__link">Chefs</a></li>
-            <li class="menu__item"><a href="#recipes" class="menu__link">Recipes</a></li>
-            <li class="menu__item"><a href="#contacts" class="menu__link">Contacts</a></li>
+            <li class="menu__item"><a href="#home" class="menu__link menu__link-active" data-menu-item="">Home</a></li>
+            <li class="menu__item"><a href="#about" class="menu__link" data-menu-item="">About</a></li>
+            <li class="menu__item"><a href="#work" class="menu__link" data-menu-item="">Work</a></li>
+            <li class="menu__item"><a href="#dishes" class="menu__link" data-menu-item="">Dishes</a></li>
+            <li class="menu__item"><a href="#chefs" class="menu__link" data-menu-item="">Chefs</a></li>
+            <li class="menu__item"><a href="#recipes" class="menu__link" data-menu-item="">Recipes</a></li>
+            <li class="menu__item"><a href="#contacts" class="menu__link" data-menu-item="">Contacts</a></li>
           </ul>
           <div class="menu__burger">
             <span></span>
@@ -34,16 +34,17 @@
       </div>
     </div>
   </header>
-  <main class="main" id="main">
+  <main  data-page-menu="" class="main" >
     <div class="page__wrapper">
-      <div class="main__bg">
+      <div class="main__bg" id="home">
         <!-- <img src="./src/image/main/bg.jpg" alt=""> -->
       </div>
       <div class="main__container">
         <div class="main__block">
           <h1 class="main__title"><span class="main__title-normal">Your</span> Favourite Food <span
               class="main__title-normal">Delivered</span> Hot & Fresh</h1>
-          <div class="main__text"><span class="main__text-upper-case">HEALTHY SWITCHER</span> chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</div>
+          <div class="main__text"><span class="main__text-upper-case">HEALTHY SWITCHER</span> chefs do all the prep
+            work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</div>
           <div class="main__button button button-main">
             <button class="button__text text-main">Order Now</button>
             <span class="button__img img-main">
@@ -58,26 +59,26 @@
                 <div class="contact__subtext">Working hours</div>
               </div>
             </div>
-            <div class="contact-main__block" id="contact-2">
+            <a href="https://goo.gl/maps/J2JE2hW1H55scgjW9" target="_blank" class="contact-main__block" id="contact-2">
               <img src="./src/image/icon/location.svg" alt="location" class="contact__logo">
               <div class="contact-main__text">
                 <div class="contact__text">Velyka Vasylkivska 100</div>
                 <div class="contact__subtext">Get Directions</div>
               </div>
-            </div>
-            <div class="contact-main__block" id="contact-3">
+            </a>
+            <a href="tel:+380508350000" class="contact-main__block" id="contact-3">
               <img src="./src/image/icon/call.svg" alt="call" class="contact__logo">
               <div class="contact-main__text">
-                <div class="contact__text">+38 (063)833 24 15</div>
+                <div class="contact__text">+38 (050) 835 00 00</div>
                 <div class="contact__subtext">Call Online</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <section class="about" id="about">
+  <section data-page-menu="" class="about" id="about">
     <div class="about__container">
       <div class="about__block">
         <div class="about__title-block title-block">
@@ -116,7 +117,7 @@
 
     </div>
   </section>
-  <section class="work" id="work">
+  <section data-page-menu="" class="work" id="work">
     <div class="work__container">
       <div class="work__block">
         <div class="work__title-block title-block">
@@ -161,7 +162,7 @@
       </div>
     </div>
   </section>
-  <section class="dishes" id="dishes">
+  <section data-page-menu="" class="dishes" id="dishes">
     <div class="dishes__conteiner">
       <div class="dishes__block">
         <div class="dishes__title-block title-block">
@@ -177,7 +178,7 @@
       </div>
     </div>
   </section>
-  <section class="chefs" id="chefs">
+  <section data-page-menu="" class="chefs" id="chefs">
     <div class="chefs__container">
       <div class="chefs__body">
         <div class="chefs__title-block title-block">
@@ -232,7 +233,7 @@
       </div>
     </div>
   </section>
-  <section class="recipes" id="recipes">
+  <section data-page-menu="" class="recipes" id="recipes">
     <div class="recipes__container">
       <div class="recipes__body">
         <div class="recipes__title-block title-block">
@@ -334,7 +335,7 @@
       </div>
     </div>
   </section>
-  <section class="social" id="contacts">
+  <section data-page-menu="" class="social" id="contacts">
     <div class="social__container">
       <div class="social__body">
         <div class="social__title-block title-block">
@@ -433,20 +434,20 @@
               <div class="contact__subtext">Working hours</div>
             </div>
           </div>
-          <div class="contact-main__block">
+          <a href="https://goo.gl/maps/J2JE2hW1H55scgjW9" target="_blank" class="contact-main__block">
             <img src="./src/image/icon/location.svg" alt="location" class="contact__logo">
             <div class="contact-main__text">
               <div class="contact__text">Velyka Vasylkivska 100</div>
               <div class="contact__subtext">Get Directions</div>
             </div>
-          </div>
-          <div class="contact-main__block">
+          </a>
+          <a href="tel:+380508350000" class="contact-main__block">
             <img src="./src/image/icon/call.svg" alt="call" class="contact__logo">
             <div class="contact-main__text">
-              <div class="contact__text">+38 (063)833 24 15</div>
+              <div class="contact__text">+38 (063) 833 24 15</div>
               <div class="contact__subtext">Call Online</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <a href="#" class="footer__logo">

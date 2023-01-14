@@ -22,7 +22,7 @@ const subtitleAnimation = () => {
     
   };
 
-  typeText('.main__text', 40, 2000);
+  typeText('.main__text', 10, 1000);
 };
 
 export default subtitleAnimation;

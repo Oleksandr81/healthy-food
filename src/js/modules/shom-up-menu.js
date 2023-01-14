@@ -27,7 +27,7 @@ const showUpMenu = () => {
   }
 
   function addClassShow(scroll) {
-    if (scroll > 1200) {
+    if (scroll > 100) {
       header.classList.add('show');
     } else {
       if (header.classList.contains('show')) {
@@ -67,7 +67,7 @@ const showUpMenu = () => {
 
   window.addEventListener('mousemove', (e) => {
     mouseY = e.clientY;
-    if (mouseY < 80) {
+    if (mouseY < 90) {
       headerShow();
       clearTimeout(timer);
     }

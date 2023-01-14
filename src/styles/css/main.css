@@ -198,6 +198,7 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  color: inherit;
 }
 @media (max-width: 769px) {
   .contact-main__block {
@@ -225,6 +226,9 @@ body._lock {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__logo {
@@ -233,6 +237,7 @@ body._lock {
 .contact__text {
   font-size: 1.6rem;
   line-height: 1.875;
+  color: #fff;
 }
 .contact__subtext {
   font-size: 1.4rem;
