@@ -6,24 +6,18 @@ const scrolling = () => {
     titleBlocks = document.querySelectorAll('[data-page-menu]');
 
   let links = document.querySelectorAll('[data-menu-item]'),
-    speed = 0.3;
-
-  console.log(links);
-  
+    speed = 0.3;  
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
+      e.preventDefault();     
 
       removeActiveClass();
+      link.classList.add('menu__link-active');
 
       burgerIcon.classList.remove('_active');
       menu.classList.remove('show-menu');
       document.body.style.overflow = '';
-
-      if (link.classList.contains('menu__link')) {
-        link.classList.add('menu__link-active');
-      }
 
       let withTop = document.documentElement.scrollTop,
         hash = link.getAttribute('href'),
@@ -41,7 +35,7 @@ const scrolling = () => {
           r = (toBlock < 0 ? Math.max(withTop - progress / speed, withTop + toBlock) : Math.min(withTop + progress / speed, withTop + toBlock));
 
         document.documentElement.scrollTo(0, r);
-
+        
         if (r != withTop + toBlock) {
           requestAnimationFrame(step);
         } else {
@@ -52,10 +46,10 @@ const scrolling = () => {
   });
 
   function removeActiveClass() {
-    titleBlocks.forEach(link => {
-      if (link.classList.contains('menu__link')) {
+    links.forEach(link => {
+      // if (link.classList.contains('menu__link')) {
         link.classList.remove('menu__link-active');
-      }
+      // }
     });
   }
 };

@@ -8,7 +8,7 @@ const changeActiveMenu = () => {
     let len = titleBlocks.length;
 
     for (let i = 0; i < len; i++) {
-      if (window.scrollY >= titleBlocks[i].offsetTop) {
+      if (window.scrollY >= titleBlocks[i].offsetTop - 2) {
         removeActiveClass();
         menuLinks[i].classList.add('menu__link-active');
       }
@@ -21,7 +21,7 @@ const changeActiveMenu = () => {
     });
   }
 
-  activeMenu();
+  // activeMenu();
   window.addEventListener('scroll', activeMenu);
 
 };
