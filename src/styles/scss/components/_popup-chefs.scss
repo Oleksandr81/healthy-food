@@ -27,6 +27,14 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+
+    @media(max-width: $md3) {
+      width: 460px;
+    }
+
+    @media(max-width: $md4) {
+      width: 300px;
+    }
   }
 
   // .popup__chefs-btn-close
@@ -44,10 +52,17 @@
   &__chefs-block {
     position: relative;
     left: -690px;
-    // overflow: hidden;
     display: flex;
     gap: 30px;
     width: 100%;
+
+    @media(max-width: $md3) {
+      left: -430px;
+    }
+
+    @media(max-width: $md4) {
+      left: -270px;
+    }
   }
 
   &__chefs-body {
@@ -59,10 +74,15 @@
   }
 
   // .popup__chefs-img
-  &__chefs-img {
+  &__chefs-img img{
     width: 180px;
     height: 180px;
     // background: url('../../image/popup-chefs/avatar-1.png') 0 0 no-repeat;
+
+    @media(max-width: $md3) {
+      width: 120px;
+      height: 120px;
+    }
   }
 
   // .popup__chefs-text
@@ -95,12 +115,20 @@
   &__chefs-discription {
     display: flex;
     gap: 25px;
+
+    @media(max-width: $md3) {
+      flex-direction: column;
+    }
   }
 
   // .popup__chefs-discription-img
   &__chefs-discription-img img {
     height: 160px;
     width: 255px;
+
+    @media(max-width: $md4) {
+      display: none;
+    }
   }
 
   // .popup__chefs-discription-text
@@ -119,6 +147,10 @@
     height: 60px;
     justify-content: end;
     padding-top: 15px;
+
+    @media(max-width: $md4) {
+      justify-content: center;
+    }
   }
 
   // .popup__chefs-btn-prev

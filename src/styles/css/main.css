@@ -1486,6 +1486,16 @@ body._lock {
           align-items: center;
   overflow: hidden;
 }
+@media (max-width: 769px) {
+  .popup__chefs-container {
+    width: 460px;
+  }
+}
+@media (max-width: 500px) {
+  .popup__chefs-container {
+    width: 300px;
+  }
+}
 .popup__chefs-btn-close {
   position: absolute;
   width: 19px;
@@ -1505,6 +1515,16 @@ body._lock {
   gap: 30px;
   width: 100%;
 }
+@media (max-width: 769px) {
+  .popup__chefs-block {
+    left: -430px;
+  }
+}
+@media (max-width: 500px) {
+  .popup__chefs-block {
+    left: -270px;
+  }
+}
 .popup__chefs-body {
   position: relative;
   min-width: 100%;
@@ -1519,9 +1539,15 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
 }
-.popup__chefs-img {
+.popup__chefs-img img {
   width: 180px;
   height: 180px;
+}
+@media (max-width: 769px) {
+  .popup__chefs-img img {
+    width: 120px;
+    height: 120px;
+  }
 }
 .popup__chefs-text {
   display: -webkit-box;
@@ -1556,9 +1582,22 @@ body._lock {
   display: flex;
   gap: 25px;
 }
+@media (max-width: 769px) {
+  .popup__chefs-discription {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .popup__chefs-discription-img img {
   height: 160px;
   width: 255px;
+}
+@media (max-width: 500px) {
+  .popup__chefs-discription-img img {
+    display: none;
+  }
 }
 .popup__chefs-discription-text {
   font-size: 16px;
@@ -1576,6 +1615,13 @@ body._lock {
       -ms-flex-pack: end;
           justify-content: end;
   padding-top: 15px;
+}
+@media (max-width: 500px) {
+  .popup__chefs-btn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .popup__chefs-btn-prev {
   height: 60px;
