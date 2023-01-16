@@ -101,7 +101,6 @@ const slider = () => {
   }
 
   slider('.slider-dish', '.slider-dish__container', '.slider-dish__slide', '.prev-btn', '.next-btn');
-
 };
 
 export default slider;

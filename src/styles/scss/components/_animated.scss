@@ -1,7 +1,8 @@
 .fadeIn {
   opacity: 0;
   animation-name: fadeIn;
-  animation-fill-mode: forwards
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
 }
 
 @keyframes fadeIn {
@@ -106,5 +107,73 @@
 
   to {
     top: -100%;
+  }
+}
+
+.hideToLeft {
+  position: relative;
+  animation-name: hideToLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes hideToLeft {
+  from {
+    left: +100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.showFromLeft {
+  position: relative;
+  animation-name: showFromLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes showFromLeft {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.hideToRight {
+  position: relative;
+  animation-name: hideToRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes hideToRight {
+  from {
+    right: +100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.showFromRight {
+  position: relative;
+  animation-name: showFromRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes showFromRight {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
   }
 }

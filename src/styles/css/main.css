@@ -101,6 +101,7 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 1.4rem;
   font-family: "Helvetica Neue Roman";
   color: #ffffff;
@@ -733,6 +734,12 @@ body._lock {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+.card-chef:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
 }
 .card-chef__logo {
   display: -webkit-box;
@@ -769,7 +776,7 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 @media (max-width: 370px) {
   .card-chef__img:last-child {
@@ -1110,6 +1117,8 @@ body._lock {
           animation-name: fadeIn;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1281,6 +1290,114 @@ body._lock {
     top: -100%;
   }
 }
+.hideToLeft {
+  position: relative;
+  -webkit-animation-name: hideToLeft;
+          animation-name: hideToLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hideToLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hideToLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.showFromLeft {
+  position: relative;
+  -webkit-animation-name: showFromLeft;
+          animation-name: showFromLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes showFromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes showFromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.hideToRight {
+  position: relative;
+  -webkit-animation-name: hideToRight;
+          animation-name: hideToRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hideToRight {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes hideToRight {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+.showFromRight {
+  position: relative;
+  -webkit-animation-name: showFromRight;
+          animation-name: showFromRight;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes showFromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes showFromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
 .menu__burger {
   display: none;
   margin: 15px 0;
@@ -1333,6 +1450,150 @@ body._lock {
         -ms-transform: scale(0) translate(0, 50%);
             transform: scale(0) translate(0, 50%);
   }
+}
+
+.popup__chefs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(166, 166, 166, 0.3);
+  display: none;
+  opacity: 0;
+  z-index: 100;
+}
+.popup__chefs-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 720px;
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.popup__chefs-btn-close {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: 25px;
+  top: 25px;
+  background: url("../../image/icon/btn-close.svg");
+  cursor: pointer;
+  z-index: 10;
+}
+.popup__chefs-block {
+  position: relative;
+  left: -690px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+.popup__chefs-body {
+  position: relative;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__chefs-img {
+  width: 180px;
+  height: 180px;
+}
+.popup__chefs-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 35px;
+  font-family: "Helvetica Neue Roman";
+  font-style: normal;
+  font-weight: 400;
+}
+.popup__chefs-name {
+  font-size: 32px;
+  line-height: 37px;
+  color: #ffffff;
+}
+.popup__chefs-prof {
+  font-size: 20px;
+  line-height: 16px;
+  color: #a6a6a6;
+}
+.popup__chefs-discription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+.popup__chefs-discription-img img {
+  height: 160px;
+  width: 255px;
+}
+.popup__chefs-discription-text {
+  font-size: 16px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.popup__chefs-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+  width: 100%;
+  height: 60px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 15px;
+}
+.popup__chefs-btn-prev {
+  height: 60px;
+  width: 60px;
+  background: url("../../image/icon/arrow-prev.svg") 0 0 no-repeat;
+  cursor: pointer;
+}
+.popup__chefs-btn-prev:hover {
+  background: url("../../image/icon/arrow-prev-active.svg") 0 0 no-repeat;
+}
+.popup__chefs-btn-next {
+  height: 60px;
+  width: 60px;
+  background: url("../../image/icon/arrow-next.svg") 0 0 no-repeat;
+  cursor: pointer;
+}
+.popup__chefs-btn-next:hover {
+  background: url("../../image/icon/arrow-next-active.svg") 0 0 no-repeat;
 }
 
 .header__container {
@@ -1596,9 +1857,8 @@ body._lock {
   padding: 60px 0 30px 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .recipes__container {
   max-width: 1140px;
