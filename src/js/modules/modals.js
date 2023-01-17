@@ -21,7 +21,7 @@ const modals = (modalSelector, btnsModal, btnCloseSelector) => {
       item.remove();
     });
   }
-
+  
   function getDublicateBlocks() {
     for (let i = 0; i < arrBlocks.length; i++) {
       newArrBlocks[i] = arrBlocks[i];

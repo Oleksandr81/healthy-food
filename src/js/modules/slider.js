@@ -7,12 +7,14 @@ const slider = () => {
       sliderConteiner = document.querySelector(sliderConteinerSelector),
       btnNext = document.querySelector(btnNextSelector),
       btnPrev = document.querySelector(btnPrevSelector),
-      slides = document.querySelectorAll(slidesSelector);
+      slides = document.querySelectorAll(slidesSelector),
+      time = 600;
 
     let intViewportWidth = window.innerWidth,
       slideIndex = 0,
       moveSlide,
-      slidesLenght;
+      slidesLenght,
+      checkButton = false;
 
     function viewVisualSlide() {
       const block = document.createElement('div'),
@@ -80,11 +82,17 @@ const slider = () => {
     }
 
     btnNext.addEventListener('click', () => {
-      nextSlide(1);
+      if (!checkButton) {
+        nextSlide(1);
+        pauseClickButton();
+      }
     });
 
     btnPrev.addEventListener('click', () => {
-      nextSlide(-1);
+      if (!checkButton) {
+        nextSlide(-1);
+        pauseClickButton();
+      }
     });
 
     slider.addEventListener('mouseenter', () => {
@@ -94,6 +102,13 @@ const slider = () => {
     slider.addEventListener('mouseleave', () => {
       showSlideByTime();
     });
+
+    function pauseClickButton() {
+      checkButton = true;
+      setTimeout(() => {
+        checkButton = false;
+      }, time);
+    }
 
     viewVisualSlide();
     viewSlide(slideIndex);
