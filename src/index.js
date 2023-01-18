@@ -11,6 +11,7 @@ import changeActiveMenu from "./js/modules/change-active-menu";
 import modals from "./js/modules/modals";
 // import sliderPopup from "./js/modules/slider-popup";
 import SliderChef from "./js/modules/slider-popup";
+import sliderRecipes from "./js/modules/slider-recipes";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   changeActiveMenu();
   modals('.popup__chefs', '.card-chef', '.popup__chefs-btn-close');
   // sliderPopup();
+  sliderRecipes();
 
   const sliderChef = new SliderChef({
     container: '.popup__chefs-block' ,

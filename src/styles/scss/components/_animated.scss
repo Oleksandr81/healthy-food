@@ -2,7 +2,7 @@
   opacity: 0;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fadeIn {
@@ -175,5 +175,21 @@
 
   to {
     right: 0;
+  }
+}
+
+.moveUp {
+  animation-name: moveUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+@keyframes moveUp {
+  from {
+    top: 180px;
+  }
+
+  to {
+    top: 0px
   }
 }

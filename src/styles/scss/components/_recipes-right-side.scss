@@ -1,7 +1,11 @@
 .recipes {
+  
 
   // .recipes__right-side
-  &__right-side {}
+  &__right-side {
+    height: 510px;
+    overflow: hidden;
+  }
 }
 
 .right-side-recipes {
@@ -12,7 +16,7 @@
     flex-direction: column;
     justify-content:flex-start;
     gap: 30px;
-    height: 100%;
+    // height: 100%;
   }
 
 
@@ -20,7 +24,7 @@
   &__block {
     position: relative;
     max-width: 540px;
-    max-height: 150px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -29,6 +33,8 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     overflow: hidden;
+    justify-content: space-between;
+    transition: all 10s ease;
   }
 
   &__block_green {

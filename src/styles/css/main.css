@@ -789,35 +789,41 @@ body._lock {
 
 .recipes__left-side {
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 60px 90px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  max-width: 540px;
-  max-height: 540px;
+  width: 540px;
+  height: 510px;
   overflow: hidden;
 }
 
 .left-side-recipes {
   position: relative;
 }
+.left-side-recipes__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.left-side-recipes__block {
+  position: relative;
+  width: 540px;
+  padding: 60px 90px;
+  max-height: 540px;
+  border-radius: 6px;
+}
+.left-side-recipes__block.bg-grey {
+  background-color: #252525;
+}
+.left-side-recipes__block.bg-green {
+  background-color: #34c759;
+}
 .left-side-recipes__img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: -5;
+}
+.left-side-recipes__img img {
+  border-radius: 6px;
 }
 .left-side-recipes__btn {
   position: absolute;
@@ -825,38 +831,58 @@ body._lock {
   right: 30px;
   cursor: pointer;
 }
+.left-side-recipes__text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 390px;
+  color: #ffffff;
+}
+.left-side-recipes__text-block.text-dark {
+  color: #252525;
+}
 .left-side-recipes__title {
   font-family: "Helvetica Neue Condensed Black";
   font-size: 1rem;
   line-height: 2.5;
   letter-spacing: 1.25px;
-  color: #ffffff;
   padding: 0px 16px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   text-transform: uppercase;
 }
+.left-side-recipes__title.bg-green {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .left-side-recipes__date {
   font-size: 1.4rem;
   line-height: 2.14;
-  color: #ffffff;
-  padding: 65px 0 25px 0;
 }
 .left-side-recipes__text {
   font-size: 2.4rem;
   line-height: 1.67;
-  color: #ffffff;
 }
 .left-side-recipes__author {
   font-size: 1.4rem;
   line-height: 2.14;
-  padding: 45px 0 60px 0;
 }
 .left-side-recipes__revision {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 27px;
+  color: #252525;
 }
 .left-side-recipes__watch-block {
   display: -webkit-box;
@@ -869,6 +895,11 @@ body._lock {
   font-size: 1.2rem;
   line-height: 2.5;
 }
+.recipes__right-side {
+  height: 510px;
+  overflow: hidden;
+}
+
 .right-side-recipes__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -881,12 +912,11 @@ body._lock {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 30px;
-  height: 100%;
 }
 .right-side-recipes__block {
   position: relative;
   max-width: 540px;
-  max-height: 150px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -901,6 +931,12 @@ body._lock {
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 10s ease;
+  -o-transition: all 10s ease;
+  transition: all 10s ease;
 }
 .right-side-recipes__block_green {
   background: #34c759;
@@ -1120,8 +1156,8 @@ body._lock {
           animation-name: fadeIn;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1399,6 +1435,32 @@ body._lock {
   }
   to {
     right: 0;
+  }
+}
+.moveUp {
+  -webkit-animation-name: moveUp;
+          animation-name: moveUp;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes moveUp {
+  from {
+    top: 180px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    top: 180px;
+  }
+  to {
+    top: 0px;
   }
 }
 .menu__burger {

@@ -1,4 +1,5 @@
 import showElement from "./animated-show-element";
+import removeAnimated from "./delete-animated";
 
 const animatedPage = () => {
 
@@ -55,6 +56,7 @@ const animatedPage = () => {
 
       if ((recipeBlock.offsetTop - window.pageYOffset) <= 750) {
         showElement('.right-side-recipes__block', 'fadeInUpDown', 0.5, 1.5, 0.5);
+        removeAnimated('.right-side-recipes__block', 'fadeInUpDown', 4000);
       }
       
       if ((recipeBlock.offsetTop - window.pageYOffset) <= 750) {
