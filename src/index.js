@@ -16,9 +16,9 @@ import starsRating from "./js/modules/stars-rating";
 window.addEventListener('DOMContentLoaded', () => {
 
   'use strict';
-  // animatedTittle();
+  animatedTittle();
   animatedPage();
-  // subtitleAnimation();
+  subtitleAnimation();
   showElement();
   slider();
   scrolling();
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   modals('.popup__chefs', '.card-chef', '.popup__chefs-btn-close');
   sliderRecipes();
   starsRating();
-  
+
 
   const sliderChef = new SliderChef({
     container: '.popup__chefs-block' ,

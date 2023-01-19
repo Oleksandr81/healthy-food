@@ -85,10 +85,8 @@
     line-height: 1.38;
     letter-spacing: -0.1625px;
     color: $color-text;
-    max-height: 54px;
+    min-height: 54px;
     margin: 20px 0;
-
-
 
     /* width */
     &::-webkit-scrollbar {
