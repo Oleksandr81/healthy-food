@@ -1118,9 +1118,19 @@ body._lock {
 .social__content-insta img {
   width: 115px;
   height: 115px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.social__content-insta img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .social__content-insta-img {
   position: relative;
+  overflow: hidden;
 }
 .social__content-insta-arrow {
   position: absolute;
@@ -1148,6 +1158,17 @@ body._lock {
 
 .button-order__text {
   padding: 0px 18px;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .fadeIn {
@@ -1705,6 +1726,66 @@ body._lock {
 }
 .popup__chefs-btn-next:hover {
   background: url("../../image/icon/arrow-next-active.svg") 0 0 no-repeat;
+}
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  line-height: 0.75;
+}
+
+.rating__body {
+  position: relative;
+}
+
+.rating__body::before {
+  content: "☆☆☆☆☆";
+  display: block;
+  color: #4d4d4d;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.rating__body_active::before {
+  color: #f9ad3d;
+}
+
+.rating__active {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating__active::before {
+  content: "★★★★★";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #4d4d4d;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.rating__active_active::before {
+  color: #f9ad3d;
+}
+
+.rating__value {
+  font-size: 50%;
+  line-height: 1;
+  padding-left: 10px;
 }
 
 .header__container {

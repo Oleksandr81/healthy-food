@@ -1,5 +1,5 @@
 const sliderRecipes = () => {
-  const initSlider = (containerSliderSelector, btnSelector, animated, move = null) => {
+  const initSlider = (containerSliderSelector, btnSelector, animated) => {
     const container = document.querySelector(containerSliderSelector),
       slides = container.children,
       nextBtn = document.querySelectorAll(btnSelector);
@@ -42,7 +42,6 @@ const sliderRecipes = () => {
           }
         }
       });
-
     });
 
 

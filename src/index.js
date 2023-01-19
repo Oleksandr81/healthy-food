@@ -9,16 +9,16 @@ import showUpMenu from "./js/modules/shom-up-menu";
 import menuBuger from "./js/modules/menu-burger";
 import changeActiveMenu from "./js/modules/change-active-menu";
 import modals from "./js/modules/modals";
-// import sliderPopup from "./js/modules/slider-popup";
 import SliderChef from "./js/modules/slider-popup";
 import sliderRecipes from "./js/modules/slider-recipes";
+import starsRating from "./js/modules/stars-rating";
 
 window.addEventListener('DOMContentLoaded', () => {
 
   'use strict';
-  animatedTittle();
+  // animatedTittle();
   animatedPage();
-  subtitleAnimation();
+  // subtitleAnimation();
   showElement();
   slider();
   scrolling();
@@ -27,8 +27,9 @@ window.addEventListener('DOMContentLoaded', () => {
   menuBuger('.menu__burger');
   changeActiveMenu();
   modals('.popup__chefs', '.card-chef', '.popup__chefs-btn-close');
-  // sliderPopup();
   sliderRecipes();
+  starsRating();
+  
 
   const sliderChef = new SliderChef({
     container: '.popup__chefs-block' ,

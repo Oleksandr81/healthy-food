@@ -16,7 +16,6 @@ const cards = () => {
     });
   }
 
-
   function generateCard(item) {
     const mainBlockCard = document.createElement('div');
     mainBlockCard.classList.add('dishes-cards__card-dish', 'card-dish');
@@ -31,9 +30,11 @@ const cards = () => {
         <div class="card-dish__text">${item.descr}</div>
       </div>
       <div class="card-dish__oder-block">
-        <div class="card-dish__reiting">
-          <object data="./src/image/icon/stars.svg" type="image/svg+xml" id="stars"></object>
-          <div class="card-dish__voice">${item.reiting}</div>
+        <div class="card-dish__rating rating">
+          <div class="rating__body">
+            <div class="rating__active"></div>
+          </div>
+          <div class="rating__value" id="${item.rating}">${item.rating}</div>
         </div>
         <div class="card-dish__button button button-dish">
           <button class="button__text text-dish">Order</button>
@@ -51,12 +52,13 @@ const cards = () => {
     
     cards.forEach(card => {
       card.addEventListener('mouseover', (e) => {
-        const cardsReiting = card.querySelector('.card-dish__reiting');
+        const cardsReiting = card.querySelector('.card-dish__rating, .rating');
+        
         changeSvgColorToGold(cardsReiting);
       });
 
       card.addEventListener('mouseout', (e) => {
-        const cardsReiting = card.querySelector('.card-dish__reiting');
+        const cardsReiting = card.querySelector('.card-dish__rating, .rating');
 
         changeSvgColorToGrey(cardsReiting);
       });
@@ -64,21 +66,19 @@ const cards = () => {
   }
 
   function changeSvgColorToGold(card) {
-    const svg = card.querySelector('#stars').contentDocument,
-      elements = svg.querySelectorAll('.primaryColor');
-
-    elements.forEach(item => {
-      item.style.fill = '#F9AD3D';
-    });
+    const stars = card.querySelector('.rating__body'),
+      starsRating = stars.querySelector('.rating__active');
+      
+      // stars.classList.add('rating__body_active');
+      starsRating.classList.add('rating__active_active');     
   }
 
   function changeSvgColorToGrey(card) {
-    const svg = card.querySelector('#stars').contentDocument,
-      elements = svg.querySelectorAll('.primaryColor');
+    const stars = card.querySelector('.rating__body'),
+      starsRating = card.querySelector('.rating__active');
 
-    elements.forEach(item => {
-      item.style.fill = '#4D4D4D';
-    });
+    // stars.classList.remove('rating__body_active');
+    starsRating.classList.remove('rating__active_active');
   }
 
   initCards();

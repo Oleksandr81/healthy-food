@@ -5,7 +5,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.  Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more",
-    "reiting": 4.5,
+    "rating": 4.5,
     "voice": 15
   },
   {
@@ -14,7 +14,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.",
-    "reiting": 4.3,
+    "rating": 4.3,
     "voice": 24
   },
   {
@@ -23,7 +23,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.  Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more",
-    "reiting": 3.5,
+    "rating": 4.6,
     "voice": 5
   },
   {
@@ -32,7 +32,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.",
-    "reiting": 5,
+    "rating": 5,
     "voice": 155
   },
   {
@@ -41,7 +41,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.",
-    "reiting": 4.5,
+    "rating": 3.5,
     "voice": 10
   },
   {
@@ -50,7 +50,7 @@ export const dishCardInfo = [
     "title": "Featured Meal",
     "subtitle": "Served with french fries + drink",
     "descr": "Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more. Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more.",
-    "reiting": 4.5,
+    "rating": 4.4,
     "voice": 12
   }
 ];
