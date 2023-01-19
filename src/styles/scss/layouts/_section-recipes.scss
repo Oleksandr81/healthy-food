@@ -23,6 +23,8 @@
     @media(max-width: $md2) {
       flex-direction: column;
       align-items: center;
+      // width: 450px;
+      justify-content: center;
     }
   }
 

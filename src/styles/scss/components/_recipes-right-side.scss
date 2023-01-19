@@ -5,6 +5,10 @@
   &__right-side {
     height: 510px;
     overflow: hidden;
+
+    @media(max-width: $md5) {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +39,13 @@
     overflow: hidden;
     justify-content: space-between;
     transition: all 10s ease;
+
+    @media(max-width: 575px) {
+      width: 400px;
+    }
+    @media(max-width: $md4) {
+      width: 350px;
+    }
   }
 
   &__block_green {
@@ -56,6 +67,11 @@
     line-height: 1.875;
     text-align: left;
     z-index: 1;
+
+    @media(max-width: 575px) {
+      max-height: 55px;
+      overflow: hidden;
+    }
   }
 
   &__text_green {

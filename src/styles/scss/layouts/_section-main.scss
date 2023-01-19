@@ -59,7 +59,7 @@
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 
-    @media(max-width: $md3) {
+    @media(max-width: $md2) {
       font-size: 6rem;
     }
 
@@ -100,10 +100,12 @@
   // .main__contact
   &__contact {
     display: flex;
-    gap: 90px;
+    gap: 20px;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-    @media(max-width: $md3) {
+    @media(max-width: $md4) {
       flex-direction: column;
       gap: 30px;
     }
