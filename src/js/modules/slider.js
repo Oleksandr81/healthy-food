@@ -9,17 +9,25 @@ const slider = () => {
       btnPrev = document.querySelector(btnPrevSelector),
       slides = document.querySelectorAll(slidesSelector),
       time = 600;
-
-    let intViewportWidth = window.innerWidth,
+    
+    let intViewportWidth = document.documentElement.clientWidth,
       slideIndex = 0,
       moveSlide,
       slidesLenght,
       checkButton = false;
 
+    window.addEventListener('resize', () => {
+      intViewportWidth = document.documentElement.clientWidth;
+      viewVisualSlide();
+      viewSlide(slideIndex);
+    });
+
     function viewVisualSlide() {
       const block = document.createElement('div'),
         sliderBox = document.querySelector('.slider-dish');
 
+      console.log(intViewportWidth);
+      
       if (intViewportWidth < 993) {
         slidesLenght = slides.length;
       } else {
@@ -49,7 +57,8 @@ const slider = () => {
         slideIndex = 0;
       }
 
-
+      console.log(intViewportWidth);
+      
       if (intViewportWidth < 500) {
         sliderConteiner.style.left = `-${slideIndex * 335}px`;
       } else {
