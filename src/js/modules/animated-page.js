@@ -15,6 +15,12 @@ const animatedPage = () => {
       aboutTextBlock = document.querySelector('.about__text-block'),
       arrTitleBlock = [];
 
+    let screenDisplayHeight = document.documentElement.clientHeight;
+
+    window.addEventListener('resize', () => {
+      screenDisplayHeight = document.documentElement.clientHeight;
+    });
+
     titleBlock.forEach((item, i) => {
       item.style.opacity = '0';
     });
@@ -29,43 +35,71 @@ const animatedPage = () => {
       item.style.opacity = '0';
     });
 
-    window.addEventListener('scroll', () => {
-      
-      titleBlock.forEach((item, i) => {
-        let classTitle = item.getAttribute('class').split(" ");
-        arrTitleBlock.push(classTitle[0]);
+    console.log(screenDisplayHeight);
 
-        if ((titleBlock[i].offsetTop - window.pageYOffset) <= 750) {
-          showElement('.' + arrTitleBlock[i], 'fadeIn', 3, 0);
-          showElement('.about__slider-dish', 'fadeIn', 3, 0);
-          showElement('.about__text-block', 'fadeIn', 3, 0);
-        }
+
+    function showBlockAbout() {
+      showElement('.about__title-block', 'fadeIn', 3, 4);
+      showElement('.about__text-block', 'fadeIn', 3, 4.2);
+      showElement('.about__slider-dish', 'fadeIn', 3, 4.5);
+    }
+
+    function showBlockWork() {
+      showElement('.work__title-block', 'fadeIn', 3, 5);
+      showElement('.step__block', 'fadeInDown', 1, 5.3, 0.2);
+    }
+
+    if (screenDisplayHeight > 950 && screenDisplayHeight < 1750) {
+      showBlockAbout();
+    } else if (screenDisplayHeight >= 1750) {
+      showBlockAbout();
+      showBlockWork();
+    }
+
+    function showTitleAnimated() {
+      window.addEventListener('scroll', () => {
+        titleBlock.forEach((item, i) => {
+          let classTitle = item.getAttribute('class').split(" ");
+          arrTitleBlock.push(classTitle[0]);
+
+          if ((titleBlock[i].offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
+            showElement('.' + arrTitleBlock[i], 'fadeIn', 3, 0);
+            showElement('.about__slider-dish', 'fadeIn', 3, 0);
+            showElement('.about__text-block', 'fadeIn', 3, 0);
+          }
+        });
       });
 
-      if ((workBlock.offsetTop - window.pageYOffset) <= 750) {
+    }
+
+    window.addEventListener('scroll', () => {
+
+      showTitleAnimated();
+
+      if ((workBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.step__block', 'fadeInDown', 1, 0.5, 0.2);
       }
 
-      if ((dishesBlock.offsetTop - window.pageYOffset) <= 750) {
+      if ((dishesBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.card-dish', 'fadeInDown', 1, 0.5, 0.2);
       }
 
-      if ((chefsBlock.offsetTop - window.pageYOffset) <= 750) {
+      if ((chefsBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.card-chef', 'fadeInDown', 1, 0.5, 0.2);
       }
 
-      if ((recipeBlock.offsetTop - window.pageYOffset) <= 750) {
+      if ((recipeBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.right-side-recipes__block', 'fadeInUpDown', 0.5, 1.5, 0.5);
         removeAnimated('.right-side-recipes__block', 'fadeInUpDown', 4000);
       }
-      
-      if ((recipeBlock.offsetTop - window.pageYOffset) <= 750) {
+
+      if ((recipeBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.recipes__left-side', 'fadeInLeft', 1, 0.5);
       }
-      
-      if ((socialBlock.offsetTop - window.pageYOffset) <= 750) {
+
+      if ((socialBlock.offsetTop - window.pageYOffset) <= screenDisplayHeight * 0.8) {
         showElement('.social__box', 'fadeIn', 1, 0.5, 0.5);
-      }      
+      }
     });
   }
 

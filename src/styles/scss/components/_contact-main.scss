@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // width: 100%;
+    width: 190px;
     color: inherit;
 
     @media(max-width: $md4) {
@@ -21,6 +21,7 @@
     flex-direction: column;
     align-items: start;
     align-items: center;
+    white-space: nowrap;
   }
 }
 

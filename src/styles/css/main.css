@@ -198,6 +198,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 190px;
   color: inherit;
 }
 @media (max-width: 500px) {
@@ -229,6 +230,7 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 .contact__logo {
@@ -939,12 +941,6 @@ body._lock {
   height: 510px;
   overflow: hidden;
 }
-@media (max-width: 400px) {
-  .recipes__right-side {
-    display: none;
-  }
-}
-
 .right-side-recipes__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,6 +987,11 @@ body._lock {
 @media (max-width: 500px) {
   .right-side-recipes__block {
     width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .right-side-recipes__block {
+    width: 270px;
   }
 }
 .right-side-recipes__block_green {
@@ -1059,6 +1060,11 @@ body._lock {
   font-size: 1.2rem;
   line-height: 2.08;
   color: #a6a6a6;
+}
+@media (max-width: 400px) {
+  .right-side-recipes__date {
+    display: none;
+  }
 }
 .right-side-recipes__date_green {
   color: #252525;
@@ -1879,35 +1885,39 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
 }
-.page__wrapper {
-  height: 100vh;
-}
-
-.main {
-  min-height: 100%;
-}
 .main__bg {
-  background: url("../../image/main/bg.jpg") 0 0/100% auto no-repeat;
+  background: url("../../image/main/bg.jpg") 0 0 no-repeat;
   position: absolute;
   top: -90px;
   left: 0;
   z-index: -10;
+  height: 1080px;
   width: 100%;
-  height: 100%;
 }
 @media (max-width: 769px) {
   .main__bg {
     background: url("../../image/main/bg-tablet.jpg") 0 0 no-repeat;
-    height: 110%;
   }
 }
 .main__container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0px 15px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-height: 800px) {
+  .main__container {
+    display: block;
+  }
 }
 .main__block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1915,22 +1925,12 @@ body._lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 870px;
-  margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: center;
-  height: 80%;
-  max-height: 800px;
-  padding: 80px 0 60px 0;
-}
-@media (max-width: 769px) {
-  .main__block {
-    padding-bottom: 50px;
-  }
+  max-width: 870px;
+  margin: 0 auto;
+  padding: 80px 0 90px;
 }
 .main__title {
   font-family: "Helvetica Neue Condensed Bold";
@@ -1942,13 +1942,15 @@ body._lock {
           transform: scale(0.94);
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
           animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  height: 100%;
+  text-align: center;
 }
 @media (max-width: 993px) {
   .main__title {
     font-size: 6rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 769px) {
   .main__title {
     font-size: 5rem;
   }
@@ -1964,13 +1966,14 @@ body._lock {
   font-size: 1.6rem;
   padding-top: 16px;
   height: 52px;
+  text-align: center;
 }
 .main__text-upper-case {
   text-transform: uppercase;
 }
 .main__button {
   min-height: 72px;
-  margin: 40px 0 70px 0;
+  margin: 60px 0 70px 0;
 }
 .main__contact {
   display: -webkit-box;
@@ -1990,6 +1993,9 @@ body._lock {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -2210,20 +2216,24 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 880px;
-  margin: 0 auto;
+  gap: 20px;
+  width: 100%;
   padding: 30px 0 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-@media (max-width: 769px) {
+@media (max-width: 500px) {
   .footer__contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .footer__text {

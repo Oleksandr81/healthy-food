@@ -7,7 +7,7 @@
     overflow: hidden;
 
     @media(max-width: $md5) {
-      display: none;
+      // display: none;
     }
   }
 }
@@ -45,6 +45,9 @@
     }
     @media(max-width: $md4) {
       width: 350px;
+    }
+    @media(max-width: $md5) {
+      width: 270px;
     }
   }
 
@@ -116,6 +119,9 @@
     font-size: 1.2rem;
     line-height: 2.08;
     color: $color-text;
+    @media(max-width: $md5) {
+      display: none;
+    }
   }
 
   &__date_green {
