@@ -832,6 +832,14 @@ body._lock {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .left-side-recipes__block {
   position: relative;
@@ -839,6 +847,10 @@ body._lock {
   padding: 60px 90px;
   max-height: 540px;
   border-radius: 6px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media (max-width: 575px) {
   .left-side-recipes__block {
@@ -950,6 +962,11 @@ body._lock {
   font-size: 1.2rem;
   line-height: 2.5;
 }
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
 .recipes__right-side {
   height: 510px;
   overflow: hidden;

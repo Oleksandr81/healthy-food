@@ -41,7 +41,12 @@ export default class SliderChef {
 
         this.pauseClickButton();
       }
-    });
+    });    
+  }
+
+  nextSlide() {
+    this.container.appendChild(this.slides[0]);
+    this.slides[this.slides.length - 1].classList.remove('hideToLeft');
   }
 
   pauseClickButton() {
@@ -49,10 +54,5 @@ export default class SliderChef {
     setTimeout(() => {
       this.checkButton = false;
     }, this.time);
-  }
-
-  nextSlide() {
-    this.container.appendChild(this.slides[0]);
-    this.slides[this.slides.length - 1].classList.remove('hideToLeft');
   }
 }

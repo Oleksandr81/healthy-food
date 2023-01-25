@@ -19,8 +19,7 @@ const slider = () => {
       startPos = 0,
       currentTranslate = 0,
       prevTranslate = 0,
-      animationID = 0,
-      currentIndex = 0;
+      animationID = 0;
 
     //Disable context menu
     window.oncontextmenu = function (e) {
@@ -29,7 +28,7 @@ const slider = () => {
       return false;
     };
 
-    slides.forEach((slide, index) => {
+    slides.forEach(slide => {
       const slideImage = slide.querySelector('img');
 
       slideImage.addEventListener('dragstart', (e) => e.preventDefault());

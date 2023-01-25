@@ -26,6 +26,9 @@
   &__container {
     display: flex;
     gap: 10px;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+    cursor: grab;
   }
 
   &__block {
@@ -34,6 +37,7 @@
     padding: 60px 90px;
     max-height: 540px;
     border-radius: 6px;
+    user-select: none;
 
     @media(max-width: 575px) {
       width: 400px;
@@ -154,4 +158,8 @@
 
   // .left-side-recipes__read-block
   &__read-block {}
+}
+
+.grabbing {
+  cursor: grabbing;
 }
