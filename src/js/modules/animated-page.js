@@ -35,8 +35,7 @@ const animatedPage = () => {
       item.style.opacity = '0';
     });
 
-    console.log(screenDisplayHeight);
-
+    // console.log(screenDisplayHeight);
 
     function showBlockAbout() {
       showElement('.about__title-block', 'fadeIn', 3, 4);

@@ -67,10 +67,11 @@
 
   &__container {
     position: relative;
-    left: 0;
     display: flex;
     gap: 35px;
     transition: all 0.6s ease;
+    transform: translateX(0);
+    cursor: grab;
 
     @media(max-width: $md2) {
       width: 350px;
@@ -83,6 +84,7 @@
   &__slide {
     width: 350px;
     height: 270px;
+    user-select: none;
 
     @media(max-width: $md4) {
       width: 300px;
@@ -106,4 +108,8 @@
     opacity: 0.1;
     cursor: pointer;
   }
+}
+
+.grabbing {
+  cursor: grabbing;
 }

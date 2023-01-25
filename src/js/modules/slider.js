@@ -9,25 +9,119 @@ const slider = () => {
       btnPrev = document.querySelector(btnPrevSelector),
       slides = document.querySelectorAll(slidesSelector),
       time = 600;
-    
+
     let intViewportWidth = document.documentElement.clientWidth,
       slideIndex = 0,
-      moveSlide,
       slidesLenght,
-      checkButton = false;
+      checkButton = false,
+      
+      isDragging = false,
+      startPos = 0,
+      currentTranslate = 0,
+      prevTranslate = 0,
+      animationID = 0,
+      currentIndex = 0;
+
+    //Disable context menu
+    window.oncontextmenu = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    };
+
+    slides.forEach((slide, index) => {
+      const slideImage = slide.querySelector('img');
+
+      slideImage.addEventListener('dragstart', (e) => e.preventDefault());
+
+      //Touch events
+      slide.addEventListener('touchstart', touchStart());
+      slide.addEventListener('touchend', touchEnd);
+      slide.addEventListener('touchmove', touchMove);
+
+      //Mouse events
+      slide.addEventListener('mousedown', touchStart());
+      slide.addEventListener('mouseup', touchEnd);
+      slide.addEventListener('mouseleave', touchEnd);
+      slide.addEventListener('mousemove', touchMove);
+    });
+   
+    function touchStart() {
+      return function (e) {             
+        startPos = getPositionX(e); 
+                     
+        isDragging = true;
+
+        animationID = requestAnimationFrame(animation);
+        sliderConteiner.classList.add('grabbing');
+      };
+    }
+
+    function touchEnd() {
+      isDragging = false;
+      cancelAnimationFrame(animationID);
+      
+      const movedBy = currentTranslate - prevTranslate;
+      
+      if (movedBy < -65) {
+        nextSlide(1);
+      }
+
+      if (movedBy > 65) {
+        nextSlide(-1);
+      }
+
+      sliderConteiner.classList.remove('grabbing');
+    }
+
+    function setPositionByIndex() {
+      if (intViewportWidth < 500) {
+        currentTranslate = -slideIndex * 335;
+      } else {
+        currentTranslate = -slideIndex * 385;
+      }
+
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+    }
+ 
+    function touchMove(e) {
+
+      if (isDragging) {
+        const currentPosition = getPositionX(e);
+        
+        currentTranslate = prevTranslate + currentPosition - startPos;
+      }
+    }
+
+    function getPositionX(e) {
+      return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    }
+
+    function animation() {
+      setSliderPosition();
+
+      if(isDragging) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    function setSliderPosition() {
+      sliderConteiner.style.transform = `translateX(${currentTranslate}px)`;
+    }
 
     window.addEventListener('resize', () => {
       intViewportWidth = document.documentElement.clientWidth;
-      viewVisualSlide();
+      viewVisualScrolling();
       viewSlide(slideIndex);
     });
 
-    function viewVisualSlide() {
+    function viewVisualScrolling() {
       const block = document.createElement('div'),
         sliderBox = document.querySelector('.slider-dish');
 
-      console.log(intViewportWidth);
-      
+      // console.log(intViewportWidth);
+
       if (intViewportWidth < 993) {
         slidesLenght = slides.length;
       } else {
@@ -57,13 +151,7 @@ const slider = () => {
         slideIndex = 0;
       }
 
-      console.log(intViewportWidth);
-      
-      if (intViewportWidth < 500) {
-        sliderConteiner.style.left = `-${slideIndex * 335}px`;
-      } else {
-        sliderConteiner.style.left = `-${slideIndex * 385}px`;
-      }
+      setPositionByIndex();
 
       showBlock[slideIndex].style.opacity = '0.8';
 
@@ -105,11 +193,11 @@ const slider = () => {
     });
 
     slider.addEventListener('mouseenter', () => {
-      clearInterval(moveSlide);
+      // clearInterval(moveSlide);
     });
 
     slider.addEventListener('mouseleave', () => {
-      showSlideByTime();
+      // showSlideByTime();
     });
 
     function pauseClickButton() {
@@ -119,9 +207,9 @@ const slider = () => {
       }, time);
     }
 
-    viewVisualSlide();
+    viewVisualScrolling();
     viewSlide(slideIndex);
-    showSlideByTime();
+    // showSlideByTime();
   }
 
   slider('.slider-dish', '.slider-dish__container', '.slider-dish__slide', '.prev-btn', '.next-btn');
