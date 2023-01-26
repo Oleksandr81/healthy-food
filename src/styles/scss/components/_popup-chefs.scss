@@ -55,6 +55,9 @@
     display: flex;
     gap: 30px;
     width: 100%;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+    cursor: grab;
 
     @media(max-width: $md3) {
       left: -430px;
@@ -71,6 +74,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none;
   }
 
   // .popup__chefs-img
@@ -175,4 +179,8 @@
       background: url('../../image/icon/arrow-next-active.svg') 0 0 no-repeat;
     }
   }
+}
+
+.grabbing {
+  cursor: grabbing;
 }

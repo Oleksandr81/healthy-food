@@ -1697,6 +1697,14 @@ body._lock {
   display: flex;
   gap: 30px;
   width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 @media (max-width: 769px) {
   .popup__chefs-block {
@@ -1721,6 +1729,10 @@ body._lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .popup__chefs-img img {
   width: 180px;
@@ -1823,6 +1835,11 @@ body._lock {
 }
 .popup__chefs-btn-next:hover {
   background: url("../../image/icon/arrow-next-active.svg") 0 0 no-repeat;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .rating {

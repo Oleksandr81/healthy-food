@@ -9,9 +9,10 @@ import showUpMenu from "./js/modules/shom-up-menu";
 import menuBuger from "./js/modules/menu-burger";
 import changeActiveMenu from "./js/modules/change-active-menu";
 import modals from "./js/modules/modals";
-import SliderChef from "./js/modules/slider-popup";
+// import SliderChef from "./js/modules/slider-popup";
 import sliderRecipes from "./js/modules/slider-recipes";
 import starsRating from "./js/modules/stars-rating";
+import sliderpopup from "./js/modules/_slider-popup";
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -29,13 +30,13 @@ window.addEventListener('DOMContentLoaded', () => {
   modals('.popup__chefs', '.card-chef', '.popup__chefs-btn-close');
   sliderRecipes();
   starsRating();
+  sliderpopup('.popup__chefs-block', '.popup__chefs-btn-prev', '.popup__chefs-btn-next');
 
-
-  const sliderChef = new SliderChef({
-    container: '.popup__chefs-block' ,
-    slides: '.popup__chefs-body',
-    prev: '.popup__chefs-btn-prev',
-    next: '.popup__chefs-btn-next'
-  });
-  sliderChef.bindTriggers();
+  // const sliderChef = new SliderChef({
+  //   container: '.popup__chefs-block' ,
+  //   slides: '.popup__chefs-body',
+  //   prev: '.popup__chefs-btn-prev',
+  //   next: '.popup__chefs-btn-next'
+  // });
+  // sliderChef.bindTriggers();
 });
